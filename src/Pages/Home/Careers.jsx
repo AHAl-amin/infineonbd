@@ -1,0 +1,80 @@
+const Careers = () => {
+    return (
+        <div className="bg-[#f7f7f7] min-h-screen py-10">
+            <div className="max-w-7xl mx-auto px-4">
+
+                {/* HEADER */}
+                <div className="flex items-center justify-between mb-10">
+
+                    <div
+                        className="bg-gradient-to-r from-[#d7e58d] to-[#edf3d2] px-5 py-3 w-[220px]"
+                        style={{
+                            clipPath: 'polygon(0 0, 100% 0, 100% 78%, 0 100%)'
+                        }}
+                    >
+                        <h2 className="text-[30px] font-semibold text-[#2f2f2f]">
+                            Careers
+                        </h2>
+                    </div>
+
+                    <p className="text-sm text-gray-600">
+                        Current position: Home &gt; Careers
+                    </p>
+                </div>
+
+                {/* CONTENT */}
+                <div className="text-[15px] leading-8 text-[#333]">
+
+                    <p className="mb-8">
+                        GMPMAX is a fully integrated pharmaceutical technology service company,
+                        leading the market and help customer GMP development. Throughout our
+                        history, we have continued to grow and expand into new and existing
+                        markets. Our growth has been the result of our customers success through
+                        the dedicated and professional approach of our employees who always act
+                        positively. Working at GMPMAX is not only about a job – it’s an extension
+                        to your family and friends, a desire to provide the finest and succeed,
+                        to work as one and as part of a universal team, striving to be the best
+                        that you can be.
+                    </p>
+
+                    <p className="mb-8">
+                        To maintain our success, we are always looking for talented, open-minded
+                        and flexible individuals with fluency in English, Russian, Portuguese,
+                        Arabic, Spanish etc., if you are an experienced sales person, a qualified
+                        service technician or highly motivated administrator who is both customer
+                        and service oriented, then joining our team could be the best move of your life.
+                    </p>
+
+                    <p className="mb-10">
+                        GMPMAX is an equal opportunity employer and places a high value on its
+                        people and their ideas. To begin your new lease on life in an international
+                        atmosphere, working at home or abroad. The opportunity awaits you.
+                    </p>
+
+                    {/* IMAGE */}
+                    <div className="mb-10">
+                        <img
+                            src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1000&auto=format&fit=crop"
+                            alt="Team Work"
+                            className="w-full max-w-[460px] h-auto object-cover"
+                        />
+                    </div>
+
+                    {/* FOOTER TEXT */}
+                    <p className="text-[15px] text-[#333]">
+                        Please send your resume to
+                        {' '}
+                        <span className="text-lime-700 font-medium">
+                            hr#gmpax.com
+                        </span>
+                        {' '}
+                        (please change # to @), our HR and management team will evaluate your
+                        resume and contact with you in soonest.
+                    </p>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Careers
