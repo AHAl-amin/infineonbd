@@ -49,9 +49,9 @@ function Banner() {
         }}
       >
         <div className='p-5 relative h-full'>
-          <h1 className='font-semibold text-xl text-[#ffffff]  italic'>
+          <h1 className='font-semibold md:text-xl text-sm text-[#ffffff]  italic'>
             INFINEON, dedicated to pharmaceutical industry, is one of the leading suppliers for pharmaceutical technology. Following the standard of cGMP, WHO, USP, EP, ChP, we provide most competent and optimum GMP solutions for customers around the world, our supply covers a range of complete production lines, advanced pharma engineering, high quality pharma equipment, consultancy services.</h1>
-          <p className='absolute bottom-4 right-4 text-right font-semibold text-[#ffffff] text-xl italic'>INFINEON, Provides Professional GMP Solutions.
+          <p className='absolute bottom-4 right-4 text-right font-semibold text-[#ffffff] md:text-xl text-sm  italic'>INFINEON, Provides Professional GMP Solutions.
             <br /> INFINEON, Maximizes Your GMP Compliance</p>
         </div>
       </div>

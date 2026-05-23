@@ -109,19 +109,19 @@ const ProductService = () => {
     }
 
     return (
-        <div className="bg-[#f7f7f7] min-h-screen py-10">
+        <div className=" min-h-screen p-6">
             <div className="max-w-7xl mx-auto px-4">
 
                 {/* HEADER */}
                 <div className="flex items-center justify-between mb-10">
 
                     <div
-                        className="bg-gradient-to-r from-[#d8e78d] to-[#edf3d2] px-5 py-3 w-[260px]"
+                        className="bg-gradient-to-b from-[#FFFFFF] via-[#DDEFD2] to-[#C8E3BA] px-6 py-3 w-[300px] rounded-bl-2xl"
                         style={{
-                            clipPath: 'polygon(0 0, 100% 0, 100% 78%, 0 100%)'
+                            clipPath: 'polygon(0 0, 100% 0, 100% 75%, 0 100%)'
                         }}
                     >
-                        <h2 className="text-[30px] font-semibold text-[#2f2f2f]">
+                        <h2 className="text-[30px]  text-[#2d2d2d]">
                             Product & Service
                         </h2>
                     </div>

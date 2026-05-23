@@ -31,19 +31,19 @@ const Download = () => {
     ]
 
     return (
-        <div className="bg-[#f7f7f7] min-h-screen py-10">
+        <div className=" min-h-screen p-6">
             <div className="max-w-7xl mx-auto px-4">
 
                 {/* HEADER */}
                 <div className="flex items-center justify-between mb-10">
 
                     <div
-                        className="bg-gradient-to-r from-[#d7e58d] to-[#edf3d2] px-5 py-3 w-[220px]"
+                        className="bg-gradient-to-b from-[#FFFFFF] via-[#DDEFD2] to-[#C8E3BA] px-6 py-3 w-[300px] rounded-bl-2xl"
                         style={{
-                            clipPath: 'polygon(0 0, 100% 0, 100% 78%, 0 100%)'
+                            clipPath: 'polygon(0 0, 100% 0, 100% 75%, 0 100%)'
                         }}
                     >
-                        <h2 className="text-[30px] font-semibold text-[#2f2f2f]">
+                        <h2 className="text-[30px]  text-[#2d2d2d]">
                             Download
                         </h2>
                     </div>
@@ -64,9 +64,9 @@ const Download = () => {
                             <div className="flex items-center justify-between py-3 px-2">
 
                                 {/* LEFT TITLE */}
-                                <a
+                                <p
                                     href="#"
-                                    className="flex items-center gap-3 text-[14px] text-[#444] hover:text-lime-600 transition-all duration-300"
+                                    className="flex items-center gap-3 text-[18px] text-[#444]  transition-all duration-300"
                                 >
                                     <span className="text-lime-500 text-sm">
                                         ❯
@@ -75,12 +75,12 @@ const Download = () => {
                                     <span>
                                         {item}
                                     </span>
-                                </a>
+                                </p>
 
                                 {/* DOWNLOAD BUTTON */}
                                 <a
                                     href="#"
-                                    className="text-lime-600 text-[13px] hover:underline"
+                                    className="text-lime-600 text-[15px] hover:underline"
                                 >
                                     [Download]
                                 </a>

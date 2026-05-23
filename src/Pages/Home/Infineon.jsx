@@ -1,201 +1,258 @@
-'use client'
 
-import React, { useState } from 'react'
+
+import React, { useEffect, useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { FaAngleRight, FaChevronLeft } from 'react-icons/fa'
 
+/* ── Reusable Pill Label ── */
+const Pill = ({ children }) => (
+    <span className="inline-block bg-gradient-to-r from-lime-400 to-lime-300 rounded-full px-3 py-0.5 text-xs font-bold text-gray-800 mb-2">
+        {children}
+    </span>
+)
 
-const Infineon = () => {
-    const [currentProductIndex, setCurrentProductIndex] = useState(0)
+const VISIBLE = 3
 
-    const products = [
-        {
-            name: 'Oil-Free Air Compressor',
-            image: 'https://via.placeholder.com/200x150?text=Oil-Free+Compressor'
-        },
-        {
-            name: 'Calibrating Machine',
-            image: 'https://via.placeholder.com/200x150?text=Calibrating+Machine'
-        },
-        {
-            name: 'FGC-5090 Automatic Calibrating Machine',
-            image: 'https://via.placeholder.com/200x150?text=FGC-5090'
-        },
-        {
-            name: 'Ozone Vacuum Sterilizer',
-            image: 'https://via.placeholder.com/200x150?text=Sterilizer'
-        }
-    ]
+const products = [
+    {
+        name: 'Calibrating Machine',
+        image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=300&q=80',
+    },
+    {
+        name: 'HZK-150® Automatic Calibrating Machine',
+        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300&q=80',
+    },
+    {
+        name: 'Pulse Vacuum Sterilizer',
+        image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=300&q=80',
+    },
+    {
+        name: 'KGSX10 Liquid Filling & Capping Machine',
+        image: 'https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=300&q=80',
+    },
+    {
+        name: 'Oil-Free Air Compressor',
+        image: 'https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=300&q=80',
+    },
+    {
+        name: 'FGC-5090 Automatic Calibrating Machine',
+        image: 'https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=300&q=80',
+    },
+]
 
-    const newsItems = [
-        'Outstanding the U-Link Next Business Model for Pharma',
-        'Why Silence is Crucial With CBD Approved Drug Listing?',
-        'Chemo Biology Corporate: Growth & Abundance Investments Generate Success',
-        'Chance to launch Next pharmaceutical battery project',
-        'The Other Pharmaceutical Market',
-        'Top Enterprise Pharmaceutical Markets'
-    ]
+const newsItems = [
+    'Rethinking the Future-New Business Models for Pharma',
+    'Who Stands To Gain With FDA Approval Of OTC Lipitor?',
+    "Pharma's Wild Ride In China",
+    'China Strong Economic Growth & Healthcare Investments Generate Succa...',
+    'The China Pharmaceutical Market',
+    'Top Emerging Pharmaceutical Markets',
+    '5 Stainless Steel BEC drive',
+]
 
-    const handlePrev = () => {
-        setCurrentProductIndex((prev) => (prev === 0 ? products.length - 1 : prev - 1))
-    }
+export default function Infineon() {
+    const [currentIndex, setCurrentIndex] = useState(0)
+    useEffect(() => {
+        const interval = setInterval(() => {
+            handleNext()
+        }, 3000)
+
+        return () => clearInterval(interval)
+    }, [currentIndex])
 
     const handleNext = () => {
-        setCurrentProductIndex((prev) => (prev === products.length - 1 ? 0 : prev + 1))
+        setCurrentIndex((prev) =>
+            prev >= products.length - VISIBLE ? 0 : prev + 1
+        )
     }
 
+    const handlePrev = () => {
+        setCurrentIndex((prev) =>
+            prev === 0 ? products.length - VISIBLE : prev - 1
+        )
+    }
+
+    const maxShift = products.length - VISIBLE
+    const shiftIndex = Math.min(Math.max(currentIndex, 0), maxShift)
+    const translateX = -(shiftIndex * (100 / VISIBLE))
+    // const translateX = -(currentIndex * (100 / VISIBLE))
+
     return (
-        <div className="w-full bg-gradient-to-b from-gray-50 to-white min-h-screen">
-            {/* About Us Section */}
-            <div className="w-full max-w-6xl mx-auto px-4 py-12">
-                <div className="mb-8">
-                    <div className="inline-block bg-gradient-to-r from-lime-400 to-lime-300 px-4 py-1 rounded-full">
-                        <h2 className="text-sm font-semibold text-gray-800">About us</h2>
-                    </div>
-                </div>
+        <div className="font-sans  w-full mx-auto  text-gray-700 p-6">
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-                    {/* About Text */}
-                    <div>
-                        <p className="text-gray-700 text-sm leading-relaxed">
-                            <span className="font-bold">GMPMAX</span> is a company recognized for its expertise in pharmaceutical engineering solutions, specializing in sterilization compliance with cGMP, WHO, USP, EP and CAP standards. Leveraging extensive project experience and strategic partnerships, we deliver robust pharmaceutical facilities and integrated scenario worldwide. Our expertise spans process engineering, advanced equipment manufacturing, clean utilities, and GMP certification and after-sales support. Committed to operational excellence, we empower pharmaceutical manufacturers with scalable, high-performance infrastructure and comprehensive pharmaceutical infrastructure and competent team.
-                        </p>
-                    </div>
+            {/* ── ABOUT US ── */}
+            <section className="">
 
-                    {/* About Image */}
-                    <div className="flex justify-center">
-                        <img
-                            src="https://via.placeholder.com/400x300?text=Lab+Scientists"
-                            alt="Laboratory scientists working"
-                            className="rounded-lg shadow-lg w-full h-auto"
-                        />
-                    </div>
-                </div>
-            </div>
-
-            {/* Products Section */}
-            <div className="w-full max-w-6xl mx-auto px-4 py-12">
-                <div className="mb-8">
-                    <div className="inline-block bg-gradient-to-r from-lime-400 to-lime-300 px-4 py-1 rounded-full">
-                        <h2 className="text-sm font-semibold text-gray-800">Products</h2>
-                    </div>
-                </div>
-
-                <div className="relative flex items-center justify-center gap-6">
-                    {/* Previous Button */}
-                    <button
-                        onClick={handlePrev}
-                        variant="outline"
-                        size="icon"
-                        className="absolute -left-6 lg:left-0 z-10 rounded-full h-10 w-10"
+                <div className="flex justify-between items-start flex-col-reverse lg:flex-row gap-6">
+                    <div
+                        className="bg-gradient-to-b from-[#FFFFFF] via-[#DDEFD2] to-[#C8E3BA] px-6 py-3 w-[300px] rounded-bl-2xl"
+                        style={{
+                            clipPath: 'polygon(0 0, 100% 0, 100% 75%, 0 100%)'
+                        }}
                     >
-                        <ChevronLeft className="h-6 w-6 text-lime-500" />
-                    </button>
-
-                    {/* Products Carousel */}
-                    <div className="flex gap-4 overflow-x-auto px-4 py-4 justify-center w-full">
-                        {products.map((product, index) => (
-                            <div
-                                key={index}
-                                className={`flex-shrink-0 w-48 p-4 text-center transition-all ${index === currentProductIndex ? 'ring-2 ring-lime-400' : ''
-                                    }`}
-                            >
-                                <img
-                                    src={product.image}
-                                    alt={product.name}
-                                    className="w-full h-40 object-cover rounded-lg mb-3"
-                                />
-                                <h3 className="text-xs font-medium text-gray-700 line-clamp-2">
-                                    {product.name}
-                                </h3>
-                            </div>
-                        ))}
+                        <h2 className="text-[30px]  text-[#2d2d2d]">
+                            About us
+                        </h2>
                     </div>
 
-                    {/* Next Button */}
+                </div>
+
+
+
+                <p className="text-lg leading-relaxed text-gray-600 mb-3 mt-8">
+                    <strong className="font-bold text-[#464646] text-justify">INFINEON</strong> is a company recognized for its expertise in pharmaceutical engineering solutions, specializing in end-to-end compliance with cGMP, WHO, USP, EP, and ChP standards. Leveraging extensive  project experience and strategic partnerships, we deliver turnkey pharmaceutical facilities and integrated systems worldwide. Our expertise spans process engineering, advanced equipment manufacturing, clean utilities, and validation services, supported by full lifecycle solutions from master planning and EPC (Engineering, Procurement, Construction) execution to GMP certification and after-sales support. Committed to operational excellence, we empower pharmaceutical manufacturers with scalable, regulation-ready infrastructure and long-term technical collaboration.
+                </p>
+                <img
+                    src="https://res.cloudinary.com/dcpbtzues/image/upload/v1779513135/Screenshot_2026-05-23_111142_poc3zz.png"
+                    alt="Pharmaceutical lab scientists in cleanroom"
+                    className="w-full object-cover object-top rounded-sm block"
+                />
+            </section>
+
+            {/* ── PRODUCTS ── */}
+            <section className="lg:pt-10 pt-4 pb-3 border-t-4 border-gray-100">
+
+                <div
+                    className="bg-gradient-to-b my-10 from-[#FFFFFF] via-[#DDEFD2] to-[#C8E3BA] px-6 py-3 w-[300px] rounded-bl-2xl"
+                    style={{
+                        clipPath: 'polygon(0 0, 100% 0, 100% 75%, 0 100%)'
+                    }}
+                >
+                    <h2 className="text-[30px]  text-[#2d2d2d]">
+                        Products
+                    </h2>
+                </div>
+
+                <div className="flex items-center-safe mt-2 gap-8">
+                    {/* Left Arrow */}
                     <button
                         onClick={handleNext}
-                        variant="outline"
-                        size="icon"
-                        className="absolute -right-6 lg:right-0 z-10 rounded-full h-10 w-10"
+                        aria-label="Previous product"
+                        className="w-6 flex-shrink-0 flex items-center justify-center bg-transparent border-none cursor-pointer"
                     >
-                        <ChevronRight className="h-6 w-6 text-lime-500" />
+                        <FaChevronLeft size={48} className="text-lime-600" strokeWidth={2.5} />
+                    </button>
+
+                    {/* Carousel Track */}
+                    <div className="flex-1 overflow-hidden">
+                        <div
+                            className="flex transition-transform duration-300 ease-in-out"
+                            style={{ transform: `translateX(${translateX}%)` }}
+                        >
+                            {products.map((product, i) => (
+                                <div
+                                    key={i}
+                                    className="flex-shrink-0  text-center flex flex-col "
+                                    style={{ width: `${100 / VISIBLE}%` }}
+                                >
+                                    <img
+                                        src={product.image}
+                                        alt={product.name}
+                                        className={`w-48  h-44  shadow-[0_0_10px_rgba(0,0,0,0.3)] object-cover rounded-sm  bg-gray-100 ${i === currentIndex ? '' : ''
+                                            }`}
+                                    />
+                                    <p className="text-xl mt-10 hover:underline hover:text-orange-400 text-gray-600 leading-tight  line-clamp-2 cursor-pointer">
+                                        {product.name}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Right Arrow */}
+                    <button
+                        onClick={handlePrev}
+                        aria-label="Next product"
+                        className="w-6 flex-shrink-0 flex items-center justify-center bg-transparent border-none cursor-pointer"
+                    >
+                        <FaChevronLeft size={48} className="text-lime-600  rotate-180" strokeWidth={2.5} />
                     </button>
                 </div>
-            </div>
+            </section>
 
-            {/* News & Events and Contact Us Section */}
-            <div className="w-full max-w-6xl mx-auto px-4 py-12">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    {/* News & Events */}
-                    <div>
-                        <div className="mb-6">
-                            <div className="inline-block bg-gradient-to-r from-lime-400 to-lime-300 px-4 py-1 rounded-full">
-                                <h2 className="text-sm font-semibold text-gray-800">News & Events</h2>
-                            </div>
-                        </div>
+            {/* ── NEWS & CONTACT ── */}
+            <div className="grid grid-cols-2 mt-10 ">
 
-                        <ul className="space-y-3">
-                            {newsItems.map((item, index) => (
-                                <li key={index} className="flex gap-3">
-                                    <span className="text-lime-500 font-bold text-lg flex-shrink-0 mt-0.5">•</span>
-                                    <a
-                                        href="#"
-                                        className="text-gray-700 text-sm hover:text-lime-600 transition-colors underline"
-                                    >
-                                        {item}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
+                {/* News & Events */}
+                <section className="p-3 border-r border-gray-200">
+
+                    <div
+                        className="bg-gradient-to-b from-[#FFFFFF] via-[#DDEFD2] to-[#C8E3BA] px-6 py-3 w-[300px] rounded-bl-2xl"
+                        style={{
+                            clipPath: 'polygon(0 0, 100% 0, 100% 75%, 0 100%)'
+                        }}
+                    >
+                        <h2 className="text-[30px]  text-[#2d2d2d]">
+                            New & Events
+                        </h2>
+                    </div>
+                    <ul className="mt-5 space-y-1.5 ">
+                        {newsItems.map((item, i) => (
+                            <li key={i} className="flex gap-1.5 items-start leading-tight mt-2">
+                                <span className="text-lime-500 text-xl flex-shrink-0  font-bold"><FaAngleRight /></span>
+                                <a
+                                    href="#"
+                                    className="text-xl line-clamp-1 border-b pb-1 border-gray-300 text-gray-600 hover:underline hover:text-orange-400 transition-colors leading-tight"
+                                >
+                                    {item}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+
+                {/* Contact Us */}
+                <section className="p-3">
+
+                    <div
+                        className="bg-gradient-to-b from-[#FFFFFF] via-[#DDEFD2] to-[#C8E3BA] px-6 py-3 w-[300px] rounded-bl-2xl"
+                        style={{
+                            clipPath: 'polygon(0 0, 100% 0, 100% 75%, 0 100%)'
+                        }}
+                    >
+                        <h2 className="text-[30px]  text-[#2d2d2d]">
+                            Contact us
+                        </h2>
                     </div>
 
-                    {/* Contact Us */}
-                    <div>
-                        <div className="mb-6">
-                            <div className="inline-block bg-gradient-to-r from-lime-400 to-lime-300 px-4 py-1 rounded-full">
-                                <h2 className="text-sm font-semibold text-gray-800">Contact us</h2>
-                            </div>
-                        </div>
-
-                        <div className="p-6">
-                            <div className="flex gap-4 mb-6">
-                                <img
-                                    src="https://via.placeholder.com/80x80?text=Profile"
-                                    alt="Contact person"
-                                    className="w-20 h-20 rounded-lg object-cover"
-                                />
-                                <div className="flex flex-col justify-center">
-                                    <h3 className="font-semibold text-gray-800 text-sm">GMPMAX Solutions Corp.</h3>
-                                    <p className="text-xs text-gray-600">Contact Representative</p>
-                                </div>
-                            </div>
-
-                            <div className="space-y-2 text-xs text-gray-700">
-                                <div>
-                                    <span className="font-semibold">Address:</span> 1 T.K. New Compound Science Building, No. 666 CheShan Road, Shanghai
-                                </div>
-                                <div>
-                                    <span className="font-semibold">Tel:</span> 0086-21-52996290
-                                </div>
-                                <div>
-                                    <span className="font-semibold">E-mail:</span>{' '}
-                                    <a href="mailto:bd@gmpmax.com" className="text-lime-600 hover:underline">
-                                        bd@gmpmax.com
-                                    </a>
-                                </div>
-                                <div>
-                                    <span className="font-semibold">Web:</span>{' '}
-                                    <a href="#" className="text-lime-600 hover:underline">
-                                        www.gmpmax.com
-                                    </a>
-                                </div>
-                            </div>
+                    <div className=" gap-2.5 items-start mt-2 mb-3">
+                        <img
+                            src="https://res.cloudinary.com/dcpbtzues/image/upload/v1779517675/Screenshot_2026-05-23_122739_cf3l7l.png"
+                            alt="Contact representative"
+                            className="mt-4 rounded-xl border-3 border-gray-100 shadow-[0_0_10px_rgba(0,0,0,0.3)] object-cover flex-shrink-0"
+                        />
+                        <div>
+                            <p className="text-xl mt-4 font-bold text-[#76923c] leading-tight">
+                                GMPMAX Solutions Corp.
+                            </p>
+                            <p className="text-[15px] text-gray-500 mt-0.5">Contact Representative</p>
                         </div>
                     </div>
-                </div>
+
+                    <div className="text-[14px] text-gray-600 space-y-1 leading-relaxed">
+                        <p>
+                            <span className="font-bold text-[#76923c] ">Address:</span> 7/14, New Caoyang Science
+                            Building, No. 333 North Muqing Rd, Shanghai
+                        </p>
+                        <p>
+                            <span className="font-bold text-[#76923c] ">Tel:</span> 0086-21-52996290
+                        </p>
+                        <p>
+                            <span className="font-bold text-[#76923c] ">E-mail:</span>{' '}
+                            <a href="mailto:bd@gmpmax.com" className=" hover:underline">
+                                bd@gmpmax.com
+                            </a>
+                        </p>
+                        <p>
+                            <span className="font-bold text-[#76923c] ">Web:</span>{' '}
+                            <a href="#" className=" hover:underline">
+                                www.infineonbd.com
+                            </a>
+                        </p>
+                    </div>
+                </section>
+
             </div>
         </div>
     )
 }
-
-export default Infineon

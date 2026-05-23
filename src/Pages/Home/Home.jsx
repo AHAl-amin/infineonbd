@@ -6,7 +6,7 @@ import Infineon from './Infineon'
 
 const Home = () => {
   return (
-    <div className='mt-4'>
+    <div className=''>
       <Infineon />
 
     </div>

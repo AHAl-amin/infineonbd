@@ -31,22 +31,23 @@ const NewsEvents = () => {
     ]
 
     return (
-        <div className="bg-[#f7f7f7] min-h-screen py-10 w-full">
+        <div className=" min-h-screen p-6 w-full">
             <div className=" mx-auto px-4">
 
                 {/* Header */}
                 <div className="flex items-center justify-between mb-10">
 
                     <div
-                        className="bg-gradient-to-r from-[#d7e58d] to-[#eef3d2] px-6 py-3 w-[260px]"
+                        className="bg-gradient-to-b from-[#FFFFFF] via-[#DDEFD2] to-[#C8E3BA] px-6 py-3 w-[300px] rounded-bl-2xl"
                         style={{
                             clipPath: 'polygon(0 0, 100% 0, 100% 75%, 0 100%)'
                         }}
                     >
-                        <h2 className="text-[30px] font-semibold text-[#2d2d2d]">
+                        <h2 className="text-[30px]  text-[#2d2d2d]">
                             News & Events
                         </h2>
                     </div>
+
 
                     <p className="text-sm text-gray-700">
                         Current position: Home &gt; News & Events
@@ -63,9 +64,7 @@ const NewsEvents = () => {
                         >
                             <a
                                 href="#"
-                                className={`flex items-center gap-3 py-3 px-2 text-[15px] transition-all duration-300 hover:text-lime-600 ${index === 10
-                                    ? 'text-orange-500 underline'
-                                    : 'text-[#444]'
+                                className={`flex items-center gap-3 py-3 px-2 text-[15px] transition-all duration-300  text-[#444] hover:text-orange-400 hover:underline
                                     }`}
                             >
                                 <span className="text-lime-500 text-sm">
