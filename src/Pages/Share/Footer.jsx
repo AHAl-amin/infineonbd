@@ -10,8 +10,8 @@ function Footer() {
         {/* Navigation Links */}
         <nav className='flex flex-wrap justify-center items-center gap-6  pb-6 mb-8'>
           <span className='font-semibold text-gray-600 text-xl'>INFINEON</span>
-          <span className='mx-2 text-gray-400'>|</span>
-          <div className='flex flex-wrap justify-center gap-6'>
+          <span className='mx-2 lg:block hidden text-gray-400'>|</span>
+          <div className='flex flex-wrap justify-center md:gap-6 gap-3'>
             {navLinks.map((link, index) => (
               <a
                 key={link}
@@ -38,10 +38,10 @@ function Footer() {
 
           {/* Copyright and Contact Info */}
           <div className=''>
-            <p className='text-gray-700 text-xl font-medium mb-2'>
+            <p className='text-gray-700 md:text-xl font-medium mb-2'>
               INFINEON™ 2013-2025. INFINEON Solutions Corp. All Rights Reserved
             </p>
-            <div className='flex flex-col sm:flex-row sm:gap-6 text-gray-700 text-xl'>
+            <div className='flex flex-col sm:flex-row sm:gap-6 text-gray-700 md:text-xl'>
               <p>
                 Tel: <span className='font-medium'>0086-21-52996290</span>
               </p>

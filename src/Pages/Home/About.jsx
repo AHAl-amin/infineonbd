@@ -3,7 +3,7 @@ import logo from '../../../public/img/logo.png';
 
 const About = () => {
     return (
-        <div className=" min-h-screen p-6">
+        <div className=" min-h-screen md:p-6 p-3 scroll-mt-[300px]" id='about'>
             <div className="max-w-7xl mx-auto px-4">
 
                 {/* Top Header */}
@@ -19,7 +19,7 @@ const About = () => {
                         </h2>
                     </div>
 
-                    <p className="lg:text-md text-sm text-gray-700">
+                    <p className="lg:text-md md:block hidden text-sm text-gray-700">
                         Current position: Home &gt; About us
                     </p>
                 </div>
@@ -61,7 +61,7 @@ const About = () => {
                     </div>
 
                     {/* Right Image */}
-                    <div className="lg:w-[25%] w-full flex justify-center lg:justify-end">
+                    <div className="lg:w-[25%] mb-4 lg:mb-0 w-full flex justify-center lg:justify-end">
                         <img
                             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop"
                             alt="Building"

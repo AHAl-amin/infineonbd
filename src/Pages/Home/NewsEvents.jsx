@@ -31,7 +31,7 @@ const NewsEvents = () => {
     ]
 
     return (
-        <div className=" min-h-screen p-6 w-full">
+        <div className=" min-h-screen md:p-6 p-3 w-full">
             <div className=" mx-auto px-4">
 
                 {/* Header */}
@@ -43,13 +43,13 @@ const NewsEvents = () => {
                             clipPath: 'polygon(0 0, 100% 0, 100% 75%, 0 100%)'
                         }}
                     >
-                        <h2 className="text-[30px]  text-[#2d2d2d]">
+                        <h2 className="md:text-[30px] text-2xl  text-[#2d2d2d]">
                             News & Events
                         </h2>
                     </div>
 
 
-                    <p className="text-sm text-gray-700">
+                    <p className="text-sm md:block hidden text-gray-700">
                         Current position: Home &gt; News & Events
                     </p>
                 </div>

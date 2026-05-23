@@ -10,10 +10,10 @@ const Main = () => {
       <div className='max-w-6xl mx-auto'>
         <Navbar />
 
-        <div className='flex my-6  shadow-[0_0_10px_rgba(0,0,0,0.3)] rounded-lg overflow-hidden'>
+        <div className='flex lg:flex-row flex-col-reverse my-3  shadow-[0_0_10px_rgba(0,0,0,0.3)] rounded-lg overflow-hidden'>
 
           {/* Sidebar */}
-          <div className='w-76 shrink-0'>
+          <div className='lg:w-76 w-full shrink-0'>
             <Sidebar />
           </div>
 

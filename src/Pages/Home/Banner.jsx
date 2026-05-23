@@ -38,14 +38,16 @@ function Banner() {
   }, [currentIndex, slides.length])
 
   return (
-    <div className='w-full flex flex-col lg:flex-row items-center justify-center mt-5 relative'>
+    <div className='w-full flex flex-col-reverse lg:flex-row items-center justify-center mt- relative'>
 
 
       <div
-        className='lg:w-2/3 w-full h-[350px] lg:rounded-tl-2xl lg:rounded-bl-2xl lg:rounded-tr-2xl  bg-cover bg-center bg-no-repeat'
+        className="lg:w-2/3 w-full h-[320px] lg:rounded-tl-2xl lg:rounded-bl-2xl lg:rounded-tr-2xl  bg-cover bg-center bg-no-repeat
+        lg:[clip-path:polygon(0_0,calc(100%-20px)_0,100%_90%,100%_100%,0_100%)]
+        "
         style={{
           backgroundImage: `url(${bannerImage})`,
-          clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 90%, 100% 100%, 0 100%)',
+
         }}
       >
         <div className='p-5 relative h-full'>
@@ -56,7 +58,7 @@ function Banner() {
         </div>
       </div>
       <div className='lg:w-1/3 w-full'>
-        <div className='relative overflow-hidden  h-[350px] abosolute lg:-left-5 -z-10'>
+        <div className='relative overflow-hidden  h-[320px] abosolute lg:-left-5 -z-10'>
           <div
             className='flex h-full '
             style={{
@@ -89,7 +91,7 @@ function Banner() {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 

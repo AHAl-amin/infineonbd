@@ -31,7 +31,7 @@ const Download = () => {
     ]
 
     return (
-        <div className=" min-h-screen p-6">
+        <div className=" min-h-screen md:p-6 p-3">
             <div className="max-w-7xl mx-auto px-4">
 
                 {/* HEADER */}
@@ -48,7 +48,7 @@ const Download = () => {
                         </h2>
                     </div>
 
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-600 md:block hidden">
                         Current position: Home &gt; Download
                     </p>
                 </div>

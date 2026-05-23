@@ -11,7 +11,7 @@ const Pill = ({ children }) => (
     </span>
 )
 
-const VISIBLE = 3
+
 
 const products = [
     {
@@ -52,6 +52,26 @@ const newsItems = [
 
 export default function Infineon() {
     const [currentIndex, setCurrentIndex] = useState(0)
+    const [visible, setVisible] = useState(3);
+
+    useEffect(() => {
+        const updateVisible = () => {
+            if (window.innerWidth >= 1024) {
+                setVisible(3); // lg
+            } else if (window.innerWidth >= 768) {
+                setVisible(3); // md
+            } else {
+                setVisible(1); // mobile
+            }
+        };
+
+        updateVisible();
+
+        window.addEventListener('resize', updateVisible);
+
+        return () => window.removeEventListener('resize', updateVisible);
+    }, []);
+
     useEffect(() => {
         const interval = setInterval(() => {
             handleNext()
@@ -62,23 +82,23 @@ export default function Infineon() {
 
     const handleNext = () => {
         setCurrentIndex((prev) =>
-            prev >= products.length - VISIBLE ? 0 : prev + 1
+            prev >= products.length - visible ? 0 : prev + 1
         )
     }
 
     const handlePrev = () => {
         setCurrentIndex((prev) =>
-            prev === 0 ? products.length - VISIBLE : prev - 1
+            prev === 0 ? products.length - visible : prev - 1
         )
     }
 
-    const maxShift = products.length - VISIBLE
+    const maxShift = products.length - visible
     const shiftIndex = Math.min(Math.max(currentIndex, 0), maxShift)
-    const translateX = -(shiftIndex * (100 / VISIBLE))
-    // const translateX = -(currentIndex * (100 / VISIBLE))
+    const translateX = -(shiftIndex * (100 / visible))
+
 
     return (
-        <div className="font-sans  w-full mx-auto  text-gray-700 p-6">
+        <div className="font-sans  w-full mx-auto  text-gray-700 lg:p-6 p-3">
 
             {/* ── ABOUT US ── */}
             <section className="">
@@ -142,16 +162,16 @@ export default function Infineon() {
                             {products.map((product, i) => (
                                 <div
                                     key={i}
-                                    className="flex-shrink-0  text-center flex flex-col "
-                                    style={{ width: `${100 / VISIBLE}%` }}
+                                    className="flex-shrink-0  text-center  flex flex-col "
+                                    style={{ width: `${100 / visible}%` }}
                                 >
                                     <img
                                         src={product.image}
                                         alt={product.name}
-                                        className={`w-48  h-44  shadow-[0_0_10px_rgba(0,0,0,0.3)] object-cover rounded-sm  bg-gray-100 ${i === currentIndex ? '' : ''
+                                        className={`md:w-48  h-44  shadow-[0_0_10px_rgba(0,0,0,0.3)] object-cover rounded-sm  bg-gray-100 ${i === currentIndex ? '' : ''
                                             }`}
                                     />
-                                    <p className="text-xl mt-10 hover:underline hover:text-orange-400 text-gray-600 leading-tight  line-clamp-2 cursor-pointer">
+                                    <p className="text-xl mx-2 mt-10 hover:underline hover:text-orange-400 text-gray-600 leading-tight  line-clamp-2 cursor-pointer">
                                         {product.name}
                                     </p>
                                 </div>
@@ -171,7 +191,7 @@ export default function Infineon() {
             </section>
 
             {/* ── NEWS & CONTACT ── */}
-            <div className="grid grid-cols-2 mt-10 ">
+            <div className="grid lg:grid-cols-2 grid-cols-1 mt-10 ">
 
                 {/* News & Events */}
                 <section className="p-3 border-r border-gray-200">

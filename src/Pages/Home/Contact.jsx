@@ -4,7 +4,7 @@ import logo from '../../../public/img/logo.png';
 
 const Contact = () => {
     return (
-        <div className=" min-h-screen p-6">
+        <div className=" min-h-screen md:p-6 p-3">
             <div className="w-full">
                 {/* Breadcrumb */}
                 <div className="flex items-center justify-between mb-10">
@@ -20,7 +20,7 @@ const Contact = () => {
                         </h2>
                     </div>
 
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-600 md:block hidden">
                         Current position: Home &gt; Contact us
                     </p>
                 </div>
