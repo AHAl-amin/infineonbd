@@ -1,9 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-
-
-
 #root {
-  font-family: Arial, sans-serif;
+  font-family: "Times New Roman", Times, serif;
 }

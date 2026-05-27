@@ -12,10 +12,8 @@ const Main = () => {
 
         <div className='flex lg:flex-row flex-col-reverse my-3  shadow-[0_0_10px_rgba(0,0,0,0.3)] rounded-lg overflow-hidden'>
 
-          {/* Sidebar */}
-          <div className='lg:w-76 w-full shrink-0'>
-            <Sidebar />
-          </div>
+
+
 
           {/* Main Content */}
           <div className='flex-1 min-w-0'>

@@ -9,7 +9,7 @@ const About = () => {
                 {/* Top Header */}
                 <div className="flex items-center justify-between mb-10">
                     <div
-                        className="bg-gradient-to-b from-[#FFFFFF] via-[#DDEFD2] to-[#C8E3BA] px-6 py-3 w-[300px] rounded-bl-2xl"
+                        className="bg-gradient-to-b from-blue-800 via-blue-950 to-[#C8E3BA] px-6 py-3 w-[300px] rounded-bl-2xl"
                         style={{
                             clipPath: 'polygon(0 0, 100% 0, 100% 75%, 0 100%)'
                         }}

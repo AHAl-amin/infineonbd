@@ -103,9 +103,9 @@ export default function Infineon() {
             {/* ── ABOUT US ── */}
             <section className="">
 
-                <div className="flex justify-between items-start flex-col-reverse lg:flex-row gap-6">
+                {/* <div className="flex justify-between items-start flex-col-reverse lg:flex-row gap-6">
                     <div
-                        className="bg-gradient-to-b from-[#FFFFFF] via-[#DDEFD2] to-[#C8E3BA] px-6 py-3 w-[300px] rounded-bl-2xl"
+                        className="bg-gradient-to-b from-blue-950 via-[#DDEFD2] to-[#C8E3BA] px-6 py-3 w-[300px] rounded-bl-2xl"
                         style={{
                             clipPath: 'polygon(0 0, 100% 0, 100% 75%, 0 100%)'
                         }}
@@ -115,7 +115,7 @@ export default function Infineon() {
                         </h2>
                     </div>
 
-                </div>
+                </div> */}
 
 
 
@@ -133,7 +133,7 @@ export default function Infineon() {
             <section className="lg:pt-10 pt-4 pb-3 border-t-4 border-gray-100">
 
                 <div
-                    className="bg-gradient-to-b my-10 from-[#FFFFFF] via-[#DDEFD2] to-[#C8E3BA] px-6 py-3 w-[300px] rounded-bl-2xl"
+                    className="bg-gradient-to-b my-10 from-blue-950 via-[#DDEFD2] to-[#C8E3BA] px-6 py-3 w-[300px] rounded-bl-2xl"
                     style={{
                         clipPath: 'polygon(0 0, 100% 0, 100% 75%, 0 100%)'
                     }}
@@ -197,7 +197,7 @@ export default function Infineon() {
                 <section className="p-3 border-r border-gray-200">
 
                     <div
-                        className="bg-gradient-to-b from-[#FFFFFF] via-[#DDEFD2] to-[#C8E3BA] px-6 py-3 w-[300px] rounded-bl-2xl"
+                        className="bg-gradient-to-b from-blue-950 via-[#DDEFD2] to-[#C8E3BA] px-6 py-3 w-[300px] rounded-bl-2xl"
                         style={{
                             clipPath: 'polygon(0 0, 100% 0, 100% 75%, 0 100%)'
                         }}
