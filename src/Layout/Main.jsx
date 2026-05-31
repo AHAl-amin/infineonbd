@@ -7,20 +7,20 @@ import Sidebar from '../Pages/Share/Sidebar'
 const Main = () => {
   return (
     <div>
-      <div className='max-w-6xl mx-auto'>
+      <div className='max-w-6xl xl:mx-auto mx-4'>
         <Navbar />
 
-        <div className='flex lg:flex-row flex-col-reverse my-3  shadow-[0_0_10px_rgba(0,0,0,0.3)] rounded-lg overflow-hidden'>
 
 
 
 
-          {/* Main Content */}
-          <div className='flex-1 min-w-0'>
-            <Outlet />
-          </div>
 
+        {/* Main Content */}
+        <div className='flex-1 min-w-0'>
+          <Outlet />
         </div>
+
+
       </div>
 
       <Footer />

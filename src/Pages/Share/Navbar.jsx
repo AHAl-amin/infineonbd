@@ -3,7 +3,7 @@
 
 import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
-import Banner from '../Home/Banner';
+
 import { IoSearch, IoMenu, IoClose, IoCallOutline } from 'react-icons/io5';
 import logo from '../../../public/img/logo.jpeg';
 
@@ -25,18 +25,18 @@ const Navbar = () => {
           {/* TOP NAV */}
           <div className="flex justify-between items-center">
             {/* LOGO */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center md:gap-4 gap-2">
               <div className="">
-                <img src={logo} alt="Logo" className="h-17 w-auto" />
+                <img src={logo} alt="Logo" className="md:h-17 h-9 md:w-auto w-12" />
               </div>
 
               {/* DESKTOP SEARCH */}
-              <div className='leading-6'>
-                <p className='hidden lg:block text-[33.7px]  font-bold text-blue-950'>
+              <div className='sm:leading-6 leading-3'>
+                <p className='lg:text-[33.7px] md:text-[20px] text-[14px]  font-bold text-blue-950'>
                   INFINEON ENGINEERING SOLUTIONS
                 </p>
 
-                <p className="text-[16px] ">
+                <p className="lg:text-[16px] sm:text-[14px] text-[10px] ">
                   We provide a complete Engineering & Business solution on
                   pharmaceuticals & plastics industries
                 </p>
@@ -44,10 +44,9 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div className="">
+            <div className="lg:block hidden">
               <div className='hidden lg:flex items-center gap-1 '>
-                {/* <input type="search" placeholder='Search products' className='border-y-3 border-l-3 w-[200px] py-1 px-2 border-gray-100 focus:outline-none ' />
-                <button className='bg-gradient-to-b from-blue-950 to-blue-800  right-0  top-0 text-white h-full flex justify-center items-center border-y-3 border-r-3 border-gray-200 py-[6px] px-3'><IoSearch size='20' /></button> */}
+
                 Contact:
 
 
@@ -68,7 +67,7 @@ const Navbar = () => {
             {/* MOBILE MENU BUTTON */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="lg:hidden text-3xl text-[#3B7E00]"
+              className="lg:hidden text-3xl text-blue-950"
             >
               {menuOpen ? <IoClose /> : <IoMenu />}
             </button>
@@ -141,71 +140,88 @@ const Navbar = () => {
 
           {/* MOBILE MENU */}
           {menuOpen && (
-            <div className="lg:hidden absolute w-full  mt-2 bg-gradient-to-b from-[#76C219] to-[#3B7E00] rounded-xl p-5 space-y-4">
+            <div className="lg:hidden absolute w-full bg-[#ffffff] text-blue-950  mt-2 shadow rounded-xl p-5 space-y-2 uppercase text-sm ">
               {/* MOBILE SEARCH */}
+              {/* <div className="lowercase gap-1 text-end text-[12px] ">
+                <div className='flex lg:flex justify-end items-center gap-1  '>
+
+                  Contact:
 
 
-              <div className='flex w-full items-center '>
-                <input type="search" placeholder='Search products' className='border-y-3 border-l-3 w-full py-1 px-2 border-gray-100 focus:outline-none ' />
-                <button className='bg-gradient-to-b   from-blue-950 to-blue-800 right-0  top-0 text-white h-full flex justify-center items-center border-y-3 border-r-3 border-gray-200 py-[6px] px-3'><IoSearch size='20' /></button>
+                  <p>
+                    +88 02 580 533 51
+                  </p>
+
+                </div>
+                <div className="flex items-center justify-end  gap-1 text-end w-full">
+
+
+                  <p className='  cursor-pointer hover:text-blue-800  transition-transform duration-75'>
+                    info@infineonbd.com
+                  </p>
+                </div>
+              </div> */}
+
+
+
+              <div>
+                {/* MOBILE LINKS */}
+                <Link
+                  to="/"
+                  onClick={closeMenu}
+                  className="block text-blue-900 font-bold"
+                >
+                  INFINEON
+                </Link>
+
+                <Link
+                  to="/about#about"
+                  onClick={closeMenu}
+                  className="block text-blue-900 font-bold"
+                >
+                  About Us
+                </Link>
+
+                <Link
+                  to="/news-events"
+                  onClick={closeMenu}
+                  className="block text-blue-900 font-bold"
+                >
+                  News & Events
+                </Link>
+
+                <Link
+                  to="/product-services"
+                  onClick={closeMenu}
+                  className="block text-blue-900 font-bold"
+                >
+                  Product & Services
+                </Link>
+
+
+
+                <Link
+                  to="/careers"
+                  onClick={closeMenu}
+                  className="block text-blue-900 font-bold"
+                >
+                  Careers
+                </Link>
+
+                <Link
+                  to="/contact"
+                  onClick={closeMenu}
+                  className="block text-blue-900 font-bold"
+                >
+                  Contact Us
+                </Link>
               </div>
-
-              {/* MOBILE LINKS */}
-              <Link
-                to="/"
-                onClick={closeMenu}
-                className="block text-white font-bold"
-              >
-                INFINEON
-              </Link>
-
-              <Link
-                to="/about#about"
-                onClick={closeMenu}
-                className="block text-white font-bold"
-              >
-                About Us
-              </Link>
-
-              <Link
-                to="/news-events"
-                onClick={closeMenu}
-                className="block text-white font-bold"
-              >
-                News & Events
-              </Link>
-
-              <Link
-                to="/product-services"
-                onClick={closeMenu}
-                className="block text-white font-bold"
-              >
-                Product & Services
-              </Link>
-
-
-
-              <Link
-                to="/careers"
-                onClick={closeMenu}
-                className="block text-white font-bold"
-              >
-                Careers
-              </Link>
-
-              <Link
-                to="/contact"
-                onClick={closeMenu}
-                className="block text-white font-bold"
-              >
-                Contact Us
-              </Link>
             </div>
           )}
         </div>
       </nav>
 
-      <Banner />
+
     </div>
   );
 };

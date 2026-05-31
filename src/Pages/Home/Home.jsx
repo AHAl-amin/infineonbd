@@ -1,12 +1,14 @@
 import React from 'react'
 
 import Infineon from './Infineon'
+import Banner from './Banner'
 
 
 
 const Home = () => {
   return (
-    <div className=''>
+    <div >
+      <Banner />
       <Infineon />
 
     </div>

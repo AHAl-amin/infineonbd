@@ -1,6 +1,12 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+/* Apply site-wide serif font so Tailwind/DaisyUI doesn't override it */
+body,
 #root {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.roman {
   font-family: "Times New Roman", Times, serif;
 }

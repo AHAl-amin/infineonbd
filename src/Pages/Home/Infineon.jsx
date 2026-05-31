@@ -119,7 +119,7 @@ export default function Infineon() {
 
 
 
-                <p className="text-lg leading-relaxed text-gray-600 mb-3 mt-8">
+                <p className="text-lg leading-relaxed text-gray-600 mb-3 mt-8 roman">
                     <strong className="font-bold text-[#464646] text-justify">INFINEON</strong> is a company recognized for its expertise in pharmaceutical engineering solutions, specializing in end-to-end compliance with cGMP, WHO, USP, EP, and ChP standards. Leveraging extensive  project experience and strategic partnerships, we deliver turnkey pharmaceutical facilities and integrated systems worldwide. Our expertise spans process engineering, advanced equipment manufacturing, clean utilities, and validation services, supported by full lifecycle solutions from master planning and EPC (Engineering, Procurement, Construction) execution to GMP certification and after-sales support. Committed to operational excellence, we empower pharmaceutical manufacturers with scalable, regulation-ready infrastructure and long-term technical collaboration.
                 </p>
                 <img

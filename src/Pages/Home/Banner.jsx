@@ -28,7 +28,7 @@ function Banner() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => prev + 1)
-    }, 2000)
+    }, 5000)
 
     return () => clearInterval(interval)
   }, [])
@@ -47,27 +47,12 @@ function Banner() {
   }, [currentIndex, slides.length])
 
   return (
-    <div className='w-full flex flex-col-reverse lg:flex-row items-center justify-center mt- relative'>
+    <div className='w-full flex flex-col-reverse lg:flex-row items-center justify-center   relative'>
 
 
-      {/* <div
-        className="lg:w-2/3 w-full h-[320px] lg:rounded-tl-2xl lg:rounded-bl-2xl lg:rounded-tr-2xl  bg-cover bg-center bg-no-repeat
-        lg:[clip-path:polygon(0_0,calc(100%-20px)_0,100%_90%,100%_100%,0_100%)]
-        "
-        style={{
-          backgroundImage: `url(${bannerImage})`,
 
-        }}
-      >
-        <div className='p-5 relative h-full'>
-          <h1 className='font-semibold md:text-xl text-sm text-[#ffffff] mr-2 text-justify  italic'>
-            “INFINEON ENGINEERING SOLUTIONS” is dedicated to providing complete solution on Pharmaceuticals, Plastics, and others Industries in Bangladesh since 2009. It's formed with a view to supporting and assisting to our valued customer in the industrial sector promptly from both principal and local end. Our team consist of experienced as well as professional sales and service engineer who have long proven track record in the industrial sector. </h1>
-          <p className='absolute bottom-4 right-4 text-right font-semibold text-[#ffffff] md:text-xl text-sm  italic'>We provide a complete engineering & business solution,
-            <br /> on pharmaceuticals & plastics industries</p>
-        </div>
-      </div> */}
       <div className=' w-full'>
-        <div className='relative overflow-hidden  h-[75vh] rounded-2xl -z-10'>
+        <div className='relative overflow-hidden  lg:h-[75vh] md:h-[80vh] h-[50vh]   rounded-2xl lg:-z-10'>
           <div
             className='flex h-full '
             style={{
