@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../../public/img/logo.png'
+import logo from '../../../public/img/logo.jpeg'
 
 function Footer() {
   const navLinks = ['About Us', 'News & Events', 'Product & Service', 'Download', 'Careers', 'Contact Us']
@@ -33,7 +33,7 @@ function Footer() {
         <div className='flex md:flex-row flex-col gap-2 justify-center'>
           {/* Logo */}
           <div className=''>
-            <img src={logo} alt="" className='w-40' />
+            <img src={logo} alt="" className='w-16 rounded-full' />
           </div>
 
           {/* Copyright and Contact Info */}

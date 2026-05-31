@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Infineon from './Infineon'
+import Infineon from './HomeSection'
 import Banner from './Banner'
 
 

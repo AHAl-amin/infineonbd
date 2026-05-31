@@ -47,7 +47,7 @@ function Banner() {
   }, [currentIndex, slides.length])
 
   return (
-    <div className='w-full flex flex-col-reverse lg:flex-row items-center justify-center   relative'>
+    <div className='w-full flex flex-col-reverse lg:flex-row items-center justify-center mt-4  relative'>
 
 
 

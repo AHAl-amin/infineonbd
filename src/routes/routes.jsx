@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home";
-import About from "../Pages/Home/About";
+import About from "../Pages/Home/Infineon";
 import Download from "../Pages/Home/Download";
 import Careers from "../Pages/Home/Careers";
 import Contact from "../Pages/Home/Contact";
