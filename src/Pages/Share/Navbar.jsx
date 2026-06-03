@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="py-3 sticky top-0 z-50 shadow-black/20 bg-white">
+      <nav className="py-3 fixed top-0 left-0 right-0 z-50 w-full shadow-black/20 bg-white max-w-6xl mx-auto">
         <div className="container mx-auto ">
           {/* TOP NAV */}
           <div className="flex justify-between items-center">
@@ -74,7 +74,7 @@ const Navbar = () => {
           </div>
 
           {/* DESKTOP MENU */}
-          <div className="hidden lg:flex bg-gradient-to-b mt-3 from-blue-800 to-blue-950 w-full justify-between px-12 py-2 rounded-xl border-t-2 border-[#ffffff] gap-6 relative uppercase text-sm  ">
+          <div className="hidden lg:flex bg-gradient-to-b mt-2 from-blue-800 to-blue-950 w-full justify-between px-12 py-2 rounded-xl border-t-2 border-[#ffffff] gap-6 relative uppercase text-sm  ">
             <Link
               to="/"
               className={` relative text-uppercase ${location.pathname === '/'

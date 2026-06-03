@@ -1,7 +1,9 @@
 import React from 'react'
 
-import Infineon from './HomeSection'
+
 import Banner from './Banner'
+import HomeSection from './HomeSection'
+import Infineon from './Infineon'
 
 
 
@@ -9,7 +11,9 @@ const Home = () => {
   return (
     <div >
       <Banner />
+      <HomeSection />
       <Infineon />
+
 
     </div>
   )

@@ -2,7 +2,7 @@ import React from 'react'
 import logo from '../../../public/img/logo.jpeg'
 
 function Footer() {
-  const navLinks = ['About Us', 'News & Events', 'Product & Service', 'Download', 'Careers', 'Contact Us']
+  const navLinks = ['About Us', 'News & Events', 'Product & Service', 'Careers', 'Contact Us']
 
   return (
     <footer className='bg-[#ebebeb] border-t border-gray-400 py-8'>
@@ -39,14 +39,14 @@ function Footer() {
           {/* Copyright and Contact Info */}
           <div className=''>
             <p className='text-gray-700 md:text-xl font-medium mb-2'>
-              INFINEON™ 2013-2025. INFINEON Solutions Corp. All Rights Reserved
+              INFINEON™ 2013-2025. INFINEON Engineering Solutions Corp. All Rights Reserved
             </p>
             <div className='flex flex-col sm:flex-row sm:gap-6 text-gray-700 md:text-xl'>
               <p>
-                Tel: <span className='font-medium'>0086-21-52996290</span>
+                Tel: <span className='font-medium'>+88 02 580 533 51</span>
               </p>
               <p>
-                E-mail: <span className='font-medium'>bd#gmpmax.com</span>
+                E-mail: <span className='font-medium'>info@infineonbd.com</span>
               </p>
             </div>
           </div>

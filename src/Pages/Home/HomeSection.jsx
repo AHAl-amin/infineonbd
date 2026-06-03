@@ -60,6 +60,8 @@ const newsItems = [
 ]
 
 export default function HomeSection() {
+
+
     const [currentIndex, setCurrentIndex] = useState(0)
     const [visible, setVisible] = useState(3);
 
@@ -83,11 +85,13 @@ export default function HomeSection() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            handleNext()
+            setCurrentIndex((prev) =>
+                prev >= products.length - visible ? 0 : prev + 1
+            )
         }, 3000)
 
         return () => clearInterval(interval)
-    }, [currentIndex])
+    }, [products.length, visible])
 
     const handleNext = () => {
         setCurrentIndex((prev) =>
@@ -138,7 +142,7 @@ export default function HomeSection() {
                         aria-label="Previous product"
                         className="w-6 flex-shrink-0 flex items-center justify-center bg-transparent border-none cursor-pointer"
                     >
-                        <FaChevronLeft size={48} className="text-lime-600" strokeWidth={2.5} />
+                        <FaChevronLeft size={28} className="hover:text-blue-900 text-gray-300" strokeWidth={2.5} />
                     </button>
 
                     {/* Carousel Track */}
@@ -150,16 +154,16 @@ export default function HomeSection() {
                             {products.map((product, i) => (
                                 <div
                                     key={i}
-                                    className="flex-shrink-0  text-center  flex flex-col "
+                                    className="flex-shrink-0  text-center  flex flex-col justify-center items-center "
                                     style={{ width: `${100 / visible}%` }}
                                 >
                                     <img
                                         src={product.image}
                                         alt={product.name}
-                                        className={`md:w-48  h-44  shadow-[0_0_10px_rgba(0,0,0,0.3)] object-cover rounded-sm  bg-gray-100 ${i === currentIndex ? '' : ''
+                                        className={` shadow-[0_0_10px_rgba(0,0,0,0.3)] object-cover rounded-sm  bg-gray-100 ${i === currentIndex ? '' : ''
                                             }`}
                                     />
-                                    <p className="text-xl mx-2 mt-10 hover:underline hover:text-orange-400 text-gray-600 leading-tight  line-clamp-2 cursor-pointer">
+                                    <p className="text-sm mx-2 mt-8 hover:underline hover:text-orange-400 text-gray-600 leading-tight  line-clamp-2 cursor-pointer">
                                         {product.name}
                                     </p>
                                 </div>
@@ -174,9 +178,14 @@ export default function HomeSection() {
                         aria-label="Next product"
                         className="w-6 flex-shrink-0 flex items-center justify-center bg-transparent border-none cursor-pointer"
                     >
-                        <FaChevronLeft size={48} className="text-lime-600  rotate-180" strokeWidth={2.5} />
+                        <FaChevronLeft size={28} className="hover:text-blue-900 text-gray-300  rotate-180" strokeWidth={2.5} />
                     </button>
                 </div>
+            </section>
+            <section className="lg:pt-10 pt-4 pb-3 roman text-lg text-justify">
+                <p>
+                    Infineon has a very strong foothold and customer base in the Bangladesh. Our core focus is on pharmaceuticals, plastics, food and beverage industries productivity development & technical assistance. It’s our responsibility to provide better experiences to develop productivity for our valuable client. As a technical & trading partner, we encourage each other to grow up and innovate. As a company, we are always trying to share best experiences to plant roots in the communities. Our service and engagement platform is very strength, flexible, and skilled to meet the needs of their business. Even yours...
+                </p>
             </section>
 
 

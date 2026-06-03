@@ -3,25 +3,28 @@ import logo from '../../../public/img/logo.png';
 
 const Infineon = () => {
     return (
-        <div className=" min-h-screen md:p-6 p-3 scroll-mt-[300px]" id='about'>
-            <div className="max-w-7xl mx-auto px-4">
+        <div className="  " id='about'>
+            <div className="max-w-7xl mx-auto md:px-0 px-3">
 
                 {/* Top Header */}
-                <div className="flex items-center justify-between mb-10">
+                {/* Header */}
+                <div className="flex items-center justify-center mb-10">
+
                     <div
-                        className="bg-gradient-to-b from-blue-800 via-blue-950 to-[#C8E3BA] px-6 py-3 w-[300px] rounded-bl-2xl"
+                        className="bg-gradient-to-b from-[#FFFFFF] via-[#EAF4FF] to-[#D6E9FF] px-6 py-3 w-[250px] rounded-bl-2xl"
                         style={{
                             clipPath: 'polygon(0 0, 100% 0, 100% 75%, 0 100%)'
                         }}
                     >
-                        <h2 className="text-[30px]  text-[#2d2d2d]">
-                            About us
+                        <h2 className="md:text-[30px] text-2xl text-[#2d2d2d]">
+                            About Us
                         </h2>
                     </div>
 
-                    <p className="lg:text-md md:block hidden text-sm text-gray-700">
-                        Current position: Home &gt; About us
-                    </p>
+
+                    {/* <p className="text-sm md:block hidden text-gray-700">
+                        Current position: Home &gt; About Us
+                    </p> */}
                 </div>
 
                 {/* Content Section */}
@@ -145,6 +148,7 @@ const Infineon = () => {
                     </p>
                 </div>
             </div>
+
         </div>
     );
 };
