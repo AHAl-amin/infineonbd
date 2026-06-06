@@ -2,7 +2,7 @@ import React from 'react'
 import logo from '../../../public/img/logo.jpeg'
 
 function Footer() {
-  const navLinks = ['About Us', 'News & Events', 'Product & Service', 'Careers', 'Contact Us']
+  const navLinks = ['Home', 'News & Events', 'Product & Service', 'Careers', 'Contact Us']
 
   return (
     <footer className='bg-[#ebebeb] border-t border-gray-400 py-8'>

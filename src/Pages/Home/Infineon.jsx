@@ -1,10 +1,110 @@
 
+import { Home } from 'lucide-react';
 import logo from '../../../public/img/logo.png';
+import HomeSection from './HomeSection';
+import React, { useEffect, useState } from 'react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { FaAngleRight, FaChevronLeft } from 'react-icons/fa'
+import CooparetiveBrand from './CooparetiveBrand';
+
+
+const products = [
+    {
+        name: 'Pharmaceuticals Machinery',
+        image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=300&q=80',
+    },
+    {
+        name: 'Plastics Machinery & Mould ',
+        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300&q=80',
+    },
+    {
+        name: 'Medical Equipment Machinery ',
+        image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=300&q=80',
+    },
+    {
+        name: 'Drinking Water Production Line ',
+        image: 'https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=300&q=80',
+    },
+    {
+        name: 'Packaging, Labelling & Printing',
+        image: 'https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=300&q=80',
+    },
+    {
+        name: 'Warehouse Equipment ',
+        image: 'https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=300&q=80',
+    },
+    {
+        name: 'Cleanroom and HVAC System ',
+        image: 'https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=300&q=80',
+    },
+    {
+        name: 'Others Machinery & Equipment',
+        image: 'https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=300&q=80',
+    },
+]
+
+const newsItems = [
+    'Rethinking the Future-New Business Models for Pharma',
+    'Who Stands To Gain With FDA Approval Of OTC Lipitor?',
+    "Pharma's Wild Ride In China",
+    'China Strong Economic Growth & Healthcare Investments Generate Succa...',
+    'The China Pharmaceutical Market',
+    'Top Emerging Pharmaceutical Markets',
+    '5 Stainless Steel BEC drive',
+]
 
 const Infineon = () => {
+
+    const [currentIndex, setCurrentIndex] = useState(0)
+    const [visible, setVisible] = useState(3);
+
+    useEffect(() => {
+        const updateVisible = () => {
+            if (window.innerWidth >= 1024) {
+                setVisible(3); // lg
+            } else if (window.innerWidth >= 768) {
+                setVisible(3); // md
+            } else {
+                setVisible(1); // mobile
+            }
+        };
+
+        updateVisible();
+
+        window.addEventListener('resize', updateVisible);
+
+        return () => window.removeEventListener('resize', updateVisible);
+    }, []);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prev) =>
+                prev >= products.length - visible ? 0 : prev + 1
+            )
+        }, 3000)
+
+        return () => clearInterval(interval)
+    }, [products.length, visible])
+
+    const handleNext = () => {
+        setCurrentIndex((prev) =>
+            prev >= products.length - visible ? 0 : prev + 1
+        )
+    }
+
+    const handlePrev = () => {
+        setCurrentIndex((prev) =>
+            prev === 0 ? products.length - visible : prev - 1
+        )
+    }
+
+    const maxShift = products.length - visible
+    const shiftIndex = Math.min(Math.max(currentIndex, 0), maxShift)
+    const translateX = -(shiftIndex * (100 / visible))
+
     return (
         <div className="  " id='about'>
-            <div className="max-w-7xl mx-auto md:px-0 px-3">
+            <div className="max-w-6xl mx-auto md:px-0 px-3 my-10">
 
                 {/* Top Header */}
                 {/* Header */}
@@ -27,14 +127,7 @@ const Infineon = () => {
                     </p> */}
                 </div>
 
-                {/* Content Section */}
-                <div>
-                    <p className="mb-8">
-                        INFINEON dedicated to pharmaceutical industry, is one of the
-                        leading suppliers for pharmaceutical engineering and
-                        pharmaceutical equipment.
-                    </p>
-                </div>
+
                 <div className="flex flex-col lg:flex-row gap-8">
 
                     {/* Left Content */}
@@ -43,21 +136,13 @@ const Infineon = () => {
 
 
                         <p className="mb-8">
-                            Our years of experience in international market, longtime
-                            cooperation with our reliable suppliers allow us to be today,
-                            as in the past, at your side as your ideal partner, to work
-                            out ever more demanding requirements of the pharmaceutical
-                            industry, not just for integrated equipment but also for large
-                            turnkey plants.
+
+
+                            “M/S. Infineon Engineering Solutions” is operating as an Indenting & Trading Company in Bangladesh since 2009. “M/S. Infineon Engineering Solutions” is formed with a view to supporting and assisting to our valued customer in the industrial sector promptly from both principal and local end. Our team consist of experienced as well as professional sales and service engineer who have long proven track record in the industrial sector.
                         </p>
 
                         <p className="mb-8">
-                            Following the standard of cGMP, WHO, USP, EP, ChP, we provide
-                            most competent and optimum GMP solutions for customers around
-                            the world, our supply covers a range of complete production
-                            lines, advanced pharma engineering, high quality pharma
-                            equipment, utility, cGMP consultancy, cGMP Design, cGMP
-                            Validation service etc.
+                            “M/S. Infineon Engineering Solutions” is operating as an Indenting & Trading Company in Bangladesh since 2009. “M/S. Infineon Engineering Solutions” is formed with a view to supporting and assisting to our valued customer in the industrial sector promptly from both principal and local end. Our team consist of experienced as well as professional sales and service engineer who have long proven track record in the industrial sector.
                         </p>
 
 
@@ -72,81 +157,61 @@ const Infineon = () => {
                         />
                     </div>
                 </div>
-                <div className="mb-10">
-                    <p>INFINEON, is a Certified Supplier by China Council for the Promotion of International Trade (CCPIT)</p>
-                    <p>INFINEON, is a Certified Supplier by China Chamber of International Commerce (CCOIC)</p>
-                    <p>
-                        INFINEON, is a verified supplier by D&amp;B® Credit Report for
-                        INFINEON is available upon request, please consult to D&amp;B.
-                    </p>
-                </div>
-
-                {/* OEM Qualification */}
-                <div className="mb-10">
-                    <h3 className="font-bold text-gray-600 mb-3 text-[18px]">
-                        OEM Factory Qualification:
-                    </h3>
-
-                    <div className="space-y-1">
-                        <p>
-                            1)Chinese A1, A2 High Pressure Equipment Design Qualification and Manufacturing Qualification. (Vessel Pressures≥99.99 MPa);
-                        </p>
-
-                        <p>
-                            2)ASME U and ASME S qualification, National Board NB qualification.
-                        </p>
-
-                        <p>
-                            3)ISO 9001 Qualification, ISO 14001 Qualifications, GB/T28001 Qualification
-                        </p>
-                    </div>
-                </div>
-
-                {/* Quality Mission */}
                 <div>
-                    <h3 className="font-bold text-gray-600 mb-3 text-[18px]">
-                        Quality Mission
-                    </h3>
+                    <section className="lg:pt-10 pt-4 pb-3 border-t-4 border-gray-100">
 
-                    <div className="space-y-1">
-                        <p>
-                            Committed to bring customers most reliable product in performance.
-                        </p>
 
-                        <p>
-                            Strict Quality Control and Technical Support at all stages ensure total customer satisfaction.
-                        </p>
 
-                        <p>
-                            High standard GMP supplier audition system to ensure each supplier highly qualified.
-                        </p>
+                        <div className="flex items-center-safe mt-2 gap-8">
+                            {/* Left Arrow */}
+                            <button
+                                onClick={handleNext}
+                                aria-label="Previous product"
+                                className="w-6 flex-shrink-0 flex items-center justify-center bg-transparent border-none cursor-pointer"
+                            >
+                                <FaChevronLeft size={28} className="hover:text-blue-900 text-gray-300" strokeWidth={2.5} />
+                            </button>
 
-                        <p>
-                            Internal project management system to ensure timely lead time and order compliance.
-                        </p>
+                            {/* Carousel Track */}
+                            <div className="flex-1 overflow-hidden">
+                                <div
+                                    className="flex transition-transform duration-300 ease-in-out"
+                                    style={{ transform: `translateX(${translateX}%)` }}
+                                >
+                                    {products.map((product, i) => (
+                                        <div
+                                            key={i}
+                                            className="flex-shrink-0  text-center  flex flex-col justify-center items-center "
+                                            style={{ width: `${100 / visible}%` }}
+                                        >
+                                            <img
+                                                src={product.image}
+                                                alt={product.name}
+                                                className={` shadow-[0_0_10px_rgba(0,0,0,0.3)] object-cover rounded-sm  bg-gray-100 ${i === currentIndex ? '' : ''
+                                                    }`}
+                                            />
+                                            <p className="text-sm mx-2 mt-8 hover:underline hover:text-orange-400 text-gray-600 leading-tight  line-clamp-2 cursor-pointer">
+                                                {product.name}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
 
-                        <p>
-                            Prompt after-sales technical assistances to minimum production loss of customer.
-                        </p>
 
-                        <p>
-                            Constant state of art pharmaceutical technology training to update our knowledge.
-                        </p>
-                    </div>
+                            {/* Right Arrow */}
+                            <button
+                                onClick={handlePrev}
+                                aria-label="Next product"
+                                className="w-6 flex-shrink-0 flex items-center justify-center bg-transparent border-none cursor-pointer"
+                            >
+                                <FaChevronLeft size={28} className="hover:text-blue-900 text-gray-300  rotate-180" strokeWidth={2.5} />
+                            </button>
+                        </div>
+                    </section>
                 </div>
+                <CooparetiveBrand />
 
-                {/* Footer Logo */}
-                <div className="mt-16">
-                    <img src={logo} alt="Logo" className="h-12 w-auto mb-4" />
-
-                    <p className="text-lime-700 font-semibold text-lg">
-                        INFINEON, Provides Professional GMP Solutions.
-                    </p>
-
-                    <p className="text-lime-700 font-semibold text-lg">
-                        INFINEON, Maximizes Your GMP Compliance.
-                    </p>
-                </div>
             </div>
 
         </div>
