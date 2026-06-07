@@ -8,6 +8,8 @@ import Contact from "../Pages/Home/Contact";
 
 import NewsEvents from "../Pages/Home/NewsEvents";
 import ProductService from "../Pages/Home/ProductService";
+import ProductsGrid from "../Pages/Home/ProductsGrid";
+import ProductDetail from "../Pages/Home/ProductDetail";
 
 
 
@@ -20,6 +22,8 @@ export const router = createBrowserRouter([
       { path: '/about', element: <About /> },
       { path: '/news-events', element: <NewsEvents /> },
       { path: '/product-services', element: <ProductService /> },
+      { path: '/products', element: <ProductsGrid /> },
+      { path: '/product/:id', element: <ProductDetail /> },
 
       { path: '/download', element: <Download /> },
       { path: '/careers', element: <Careers /> },

@@ -1,0 +1,445 @@
+{
+    "categories": [
+        {
+            "id": "solid-doses",
+            "title": "Solid Doses Machineries",
+            "image": "",
+            "items": [
+                {
+                    "id": "rapid-mixer-granulator",
+                    "name": "Rapid Mixer Granulator",
+                    "description": "High-efficiency granulation for tablet production."
+                },
+                {
+                    "id": "fluid-bed-dryer-processor",
+                    "name": "Fluid Bed Dryer/Processor",
+                    "description": "Uniform drying for powders and granules."
+                },
+                {
+                    "id": "cone-blender-machine",
+                    "name": "Cone Blender Machine",
+                    "description": "Gentle, homogenous powder blending for batch processing."
+                },
+                {
+                    "id": "multi-mill-fitz-mill",
+                    "name": "Multi Mill / Fitz Mill",
+                    "description": "Precision size reduction with consistent particle control."
+                },
+                {
+                    "id": "vibrating-shifter-machine",
+                    "name": "Vibrating Shifter Machine",
+                    "description": "Efficient particle sizing and screening for quality output."
+                },
+                {
+                    "id": "powder-filling-plugging-capping-line",
+                    "name": "Powder Filling, Plugging & Capping Line",
+                    "description": "Automated filling and sealing for powder containers."
+                },
+                {
+                    "id": "tablet-compression-machine",
+                    "name": "Tablet Compression Machine",
+                    "description": "Robust tablet compression for high-volume pharmaceutical production."
+                },
+                {
+                    "id": "tablet-coating-machine",
+                    "name": "Tablet Coating Machine",
+                    "description": "Uniform tablet coating for improved stability and appearance."
+                },
+                {
+                    "id": "capsule-filling-machine",
+                    "name": "Capsule Filling Machine",
+                    "description": "Accurate capsule filling for dry powder and pellets."
+                },
+                {
+                    "id": "blister-packing-machine",
+                    "name": "Blister Packing Machine",
+                    "description": "Secure blister packaging for tablets and capsules."
+                },
+                {
+                    "id": "tablet-capsule-counting-line",
+                    "name": "Tablet/Capsule Counting Line",
+                    "description": "High-speed counting and packaging line for accuracy."
+                },
+                {
+                    "id": "folding-machine",
+                    "name": "Folding Machine",
+                    "description": "Rapid folding solution for leaflets and carton inserts."
+                },
+                {
+                    "id": "sachet-packing-machine",
+                    "name": "Sachet Packing Machine",
+                    "description": "Precise sachet packaging for powders and liquids."
+                },
+                {
+                    "id": "auto-cartooning-machine",
+                    "name": "Auto Cartooning Machine",
+                    "description": "Automated cartooning for blister and packaged products."
+                }
+            ]
+        },
+        {
+            "id": "liquid-injectable",
+            "title": "Liquid, Injectable & IV Fluids",
+            "image": "",
+            "items": [
+                {
+                    "id": "emulsifying-homogenizer",
+                    "name": "Emulsifying/Homogenizer",
+                    "description": "High-shear emulsification for stable pharmaceutical formulations."
+                },
+                {
+                    "id": "liquid-preparation-system-plant",
+                    "name": "Liquid Preparation system/Plant",
+                    "description": "Controlled liquid processing for injectable and oral fluids."
+                },
+                {
+                    "id": "soft-gel-encapsulation-machine",
+                    "name": "Soft Gel Encapsulation Machine",
+                    "description": "Precise soft gel production with high throughput."
+                },
+                {
+                    "id": "tube-filling-machine",
+                    "name": "Tube Filling Machine (Alu, Laminated)",
+                    "description": "Reliable tube filling for laminated and aluminum tubes."
+                },
+                {
+                    "id": "liquid-filling-sealing-line",
+                    "name": "Liquid Filling & Sealing Line (Bottle)",
+                    "description": "End-to-end bottle filling and sealing for liquid products."
+                },
+                {
+                    "id": "ampoule-vial-filling-sealing-line",
+                    "name": "Ampoule/Vial Filling & Sealing Line",
+                    "description": "Sterile filling and sealing for ampoules and vials."
+                },
+                {
+                    "id": "sterilization-tunnel-dryer-autoclave",
+                    "name": "Sterilization/Tunnel Dryer (Autoclave)",
+                    "description": "Validated sterilization and drying for pharmaceutical containers."
+                },
+                {
+                    "id": "oral-dose-production-machine",
+                    "name": "Oral Does Production Machine",
+                    "description": "Accurate liquid dose production for oral medications."
+                },
+                {
+                    "id": "eye-ear-drops-filling-stoppering-capping-machine",
+                    "name": "Eye/Ear Drops Filling, Stoppering & Capping Machine",
+                    "description": "Safe aseptic filling for ophthalmic and otic products."
+                },
+                {
+                    "id": "suppository-production-machine",
+                    "name": "Suppository Production Machine",
+                    "description": "Controlled suppository forming and packaging."
+                },
+                {
+                    "id": "dosing-pump",
+                    "name": "Dosing Pump",
+                    "description": "Precision fluid dosing for liquid processing lines."
+                },
+                {
+                    "id": "transfer-pump",
+                    "name": "Transfer Pump",
+                    "description": "Safe material transfer for pharmaceutical liquids."
+                }
+            ]
+        },
+        {
+            "id": "water-generation-utilities",
+            "title": "Water Generation Utilities",
+            "image": "",
+            "items": [
+                {
+                    "id": "pw-generation-plant",
+                    "name": "Purified Water (PW) Generation plant",
+                    "description": "Validated purified water systems for pharma use."
+                },
+                {
+                    "id": "wfi-generation-plant",
+                    "name": "Water for Injection (WFI) Generation plant",
+                    "description": "High-purity WFI generation for sterile production."
+                },
+                {
+                    "id": "pure-steam-generation-plant",
+                    "name": "Pure Steam Generation (PSG) plant",
+                    "description": "Clean steam production for sterilization and utilities."
+                },
+                {
+                    "id": "water-distillation-system",
+                    "name": "Water Distillation System",
+                    "description": "Robust distillation for high-purity water supply."
+                },
+                {
+                    "id": "cip-sip-generation-system",
+                    "name": "CIP/SIP Generation system",
+                    "description": "Automated cleaning and sterilization systems."
+                },
+                {
+                    "id": "cleaning-loop-system",
+                    "name": "Cleaning Loop system",
+                    "description": "Process loop cleaning for GMP compliance."
+                },
+                {
+                    "id": "storage-manufacturing-vessel",
+                    "name": "Storage/ Manufacturing Vessel",
+                    "description": "Sanitary storage vessels for water and process fluids."
+                }
+            ]
+        },
+        {
+            "id": "clean-room-equipment",
+            "title": "Clean Room Equipment",
+            "image": "",
+            "items": [
+                {
+                    "id": "sandwich-panels-system",
+                    "name": "Sandwich panels system",
+                    "description": "Modular cleanroom wall systems for airtight environments."
+                },
+                {
+                    "id": "hvac-with-ducting-system",
+                    "name": "HVAC with ducting system",
+                    "description": "Precision climate control and air handling for clean spaces."
+                },
+                {
+                    "id": "sampling-dispensing-booth",
+                    "name": "Sampling and Dispensing Booth",
+                    "description": "Secure containment for sterile sampling operations."
+                },
+                {
+                    "id": "stability-chamber-system",
+                    "name": "Stability chamber system",
+                    "description": "Controlled stability testing for product validation."
+                },
+                {
+                    "id": "laminar-air-flow-system",
+                    "name": "Laminar Air Flow system",
+                    "description": "Uniform particulate-free airflow for critical tasks."
+                },
+                {
+                    "id": "biosafety-cabinet",
+                    "name": "Biosafety Cabinet",
+                    "description": "Safe biological containment for laboratory work."
+                },
+                {
+                    "id": "lab-furnitures",
+                    "name": "Lab Furnitures",
+                    "description": "Ergonomic and hygienic furniture for cleanroom labs."
+                },
+                {
+                    "id": "air-shower-system",
+                    "name": "Air Shower system",
+                    "description": "Particle reduction entry system for cleanrooms."
+                },
+                {
+                    "id": "eye-shower-emergency-shower",
+                    "name": "Eye Shower/Emergency Shower",
+                    "description": "Safety showers for immediate decontamination."
+                },
+                {
+                    "id": "particle-counters",
+                    "name": "Particle Counters",
+                    "description": "Real-time airborne particle monitoring."
+                },
+                {
+                    "id": "shoe-cover-dispenser",
+                    "name": "Shoe Cover Dispenser",
+                    "description": "Hygienic shoe cover dispensing for cleanroom entry."
+                }
+            ]
+        },
+        {
+            "id": "plastics-machineries",
+            "title": "Plastics Machineries",
+            "image": "",
+            "items": [
+                {
+                    "id": "injection-molding-machine",
+                    "name": "Injection Molding Machine",
+                    "description": "High-precision plastic molding for parts and components."
+                },
+                {
+                    "id": "blow-molding-machine",
+                    "name": "Blow Molding Machine",
+                    "description": "Efficient bottle and hollow part production."
+                },
+                {
+                    "id": "injection-blow-molding-machine",
+                    "name": "Injection & Blow Molding (IBM) Machine",
+                    "description": "Integrated molding for complex plastic containers."
+                },
+                {
+                    "id": "extrusion-blow-molding-machine",
+                    "name": "Extrusion Blow Molding (EBM) Machine",
+                    "description": "Large-volume hollow product manufacturing."
+                },
+                {
+                    "id": "pipe-extrusion-complete-line",
+                    "name": "Pipe Extrusion Complete Line",
+                    "description": "Continuous extrusion for high-quality pipes."
+                },
+                {
+                    "id": "all-kinds-of-mold",
+                    "name": "All kinds of Mold (Preform, Spoon, Cup, Cap, Bottle, Others)",
+                    "description": "Custom mold design for injection and blow molding."
+                }
+            ]
+        },
+        {
+            "id": "packaging-labeling-printing",
+            "title": "Packaging, Labeling & Printing Machinery",
+            "image": "",
+            "items": [
+                {
+                    "id": "sticker-labelling-machine",
+                    "name": "Sticker Labelling Machine",
+                    "description": "Accurate label application for bottles and cartons."
+                },
+                {
+                    "id": "shrink-wrapping",
+                    "name": "Shrink Wrapping",
+                    "description": "Secure shrink wrapping for retail packaging."
+                },
+                {
+                    "id": "box-over-wrapping",
+                    "name": "Box Over wrapping",
+                    "description": "Protective overwrapping for packaged goods."
+                },
+                {
+                    "id": "cartooning-line",
+                    "name": "Cartooning Line",
+                    "description": "Automated carton packing for finished products."
+                },
+                {
+                    "id": "screen-printing-machineries",
+                    "name": "Screen Printing Machineries (Cap, Body)",
+                    "description": "Decorative printing for bottle caps and bodies."
+                },
+                {
+                    "id": "online-ink-jet-printer",
+                    "name": "Online Ink Jet Printer",
+                    "description": "Real-time marking and coding on packaging lines."
+                },
+                {
+                    "id": "offline-ink-jet-printer",
+                    "name": "Offline Ink Jet Printer",
+                    "description": "Standalone printing for labels and cartons."
+                }
+            ]
+        },
+        {
+            "id": "ware-house-equipment",
+            "title": "Ware House Equipment",
+            "image": "",
+            "items": [
+                {
+                    "id": "racking-system",
+                    "name": "Racking System",
+                    "description": "Heavy-duty storage racks for warehouse optimization."
+                },
+                {
+                    "id": "plastic-pallets",
+                    "name": "Plastic Pallets",
+                    "description": "Durable pallets for hygienic storage and transport."
+                },
+                {
+                    "id": "hand-pallet",
+                    "name": "Hand Pallet",
+                    "description": "Manual pallet handling for light warehouse loads."
+                },
+                {
+                    "id": "reach-truck",
+                    "name": "Reach Truck",
+                    "description": "Efficient aisle handling for elevated storage."
+                },
+                {
+                    "id": "forklift",
+                    "name": "Forklift",
+                    "description": "Reliable material handling for heavy goods."
+                },
+                {
+                    "id": "order-picker",
+                    "name": "Order Picker",
+                    "description": "Fast order fulfillment in warehouse environments."
+                },
+                {
+                    "id": "scissor-lift",
+                    "name": "Scissor Lift",
+                    "description": "Safe vertical access for maintenance and inventory."
+                },
+                {
+                    "id": "shutter-door",
+                    "name": "Shutter & Door (SS/PVC)",
+                    "description": "Secure industrial shutters and cleanroom doors."
+                }
+            ]
+        },
+        {
+            "id": "others-equipment",
+            "title": "OTHERS EQUIPMENTS",
+            "image": "",
+            "items": [
+                {
+                    "id": "temperature-humidity-monitoring-devices",
+                    "name": "Temperature & Humidity Monitoring Devices (TESTO & EXTECH)",
+                    "description": "Critical environmental monitoring for process control."
+                },
+                {
+                    "id": "pressure-gauge-transmitter-items",
+                    "name": "Pressure Gauge & Transmitter Items (DWYER, WIKA, BRIGHTY)",
+                    "description": "Precision pressure measurement for safety systems."
+                },
+                {
+                    "id": "pneumatic-control-cylinder-items",
+                    "name": "Pneumatic Control/Cylinder Items (FESTO & AIRTAC)",
+                    "description": "Reliable pneumatic automation components."
+                },
+                {
+                    "id": "diaphragm-valve-seal",
+                    "name": "Diaphragm Valve/Seal (BURKERT)",
+                    "description": "Sanitary valve and seal solutions for fluid control."
+                },
+                {
+                    "id": "plc",
+                    "name": "Programmable Logic Controller (PLC)",
+                    "description": "Industrial control systems for automation and monitoring."
+                },
+                {
+                    "id": "inverter-vfd",
+                    "name": "Inverter/Variable Frequency Drive (VFD)",
+                    "description": "Variable motor speed control for energy efficiency."
+                },
+                {
+                    "id": "hmi-touch-screen",
+                    "name": "Human Machine Interface (HMI)/Touch Screen",
+                    "description": "Operator-friendly touchscreen control panels."
+                },
+                {
+                    "id": "silicone-tube",
+                    "name": "Silicone Tube (TOYOX, VENAIR)",
+                    "description": "Flexible tubing for clean and sterile applications."
+                },
+                {
+                    "id": "hand-gloves-for-isolator",
+                    "name": "Hand Gloves for Isolator",
+                    "description": "Protective gloves designed for isolators and containment."
+                },
+                {
+                    "id": "tunnel-heater-ahu-ss-filling-needle",
+                    "name": "Tunnel Heater for AHU and SS Filling Needle",
+                    "description": "Temperature control solutions for air handling and filling."
+                },
+                {
+                    "id": "cleanroom-garments",
+                    "name": "Cleanroom Garments (Sterile & Disposable)",
+                    "description": "Sterile protective clothing for controlled environments."
+                },
+                {
+                    "id": "cleanroom-mop-wiper",
+                    "name": "Cleanroom MOP and WIPER",
+                    "description": "Specialized cleaning tools for GMP cleaning routines."
+                }
+            ]
+        }
+    ]
+}

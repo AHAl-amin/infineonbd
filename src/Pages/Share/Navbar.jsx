@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="py-3 fixed top-0 left-0 right-0 z-50 w-full shadow-black/20 bg-white max-w-6xl mx-auto">
+      <nav className="py-3 sticky top-0 left-0 right-0 z-50 w-full shadow-black/20 bg-white max-w-6xl mx-auto">
         <div className="container mx-auto ">
           {/* TOP NAV */}
           <div className="flex justify-between items-center">
@@ -142,25 +142,6 @@ const Navbar = () => {
           {menuOpen && (
             <div className="lg:hidden absolute w-full bg-[#ffffff] text-blue-950  mt-2 shadow rounded-xl p-5 space-y-2 uppercase text-sm ">
               {/* MOBILE SEARCH */}
-              {/* <div className="lowercase gap-1 text-end text-[12px] ">
-                <div className='flex lg:flex justify-end items-center gap-1  '>
-
-                  Contact:
-
-
-                  <p>
-                    +88 02 580 533 51
-                  </p>
-
-                </div>
-                <div className="flex items-center justify-end  gap-1 text-end w-full">
-
-
-                  <p className='  cursor-pointer hover:text-blue-800  transition-transform duration-75'>
-                    info@infineonbd.com
-                  </p>
-                </div>
-              </div> */}
 
 
 

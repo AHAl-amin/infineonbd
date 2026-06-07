@@ -6,40 +6,50 @@ import React, { useEffect, useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { FaAngleRight, FaChevronLeft } from 'react-icons/fa'
 import CooparetiveBrand from './CooparetiveBrand';
+import CompanyProfile from './CompanyProfile';
+import { motion } from 'framer-motion';
+import img1 from '../../../public/img/products/product-1.png'
+import img2 from '../../../public/img/products/product-2.png'
+import img3 from '../../../public/img/products/product-3.png'
+import img4 from '../../../public/img/products/product-4.png'
+import img5 from '../../../public/img/products/product-5.png'
+import img6 from '../../../public/img/products/product-6.png'
+import img7 from '../../../public/img/products/product-7.png'
+import img8 from '../../../public/img/products/product-8.png'
 
 
 const products = [
     {
         name: 'Pharmaceuticals Machinery',
-        image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=300&q=80',
+        image: img1,
     },
     {
         name: 'Plastics Machinery & Mould ',
-        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300&q=80',
+        image: img2,
     },
     {
         name: 'Medical Equipment Machinery ',
-        image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=300&q=80',
+        image: img3,
     },
     {
         name: 'Drinking Water Production Line ',
-        image: 'https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=300&q=80',
+        image: img4,
     },
     {
         name: 'Packaging, Labelling & Printing',
-        image: 'https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=300&q=80',
+        image: img5,
     },
     {
         name: 'Warehouse Equipment ',
-        image: 'https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=300&q=80',
+        image: img6,
     },
     {
         name: 'Cleanroom and HVAC System ',
-        image: 'https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=300&q=80',
+        image: img7,
     },
     {
         name: 'Others Machinery & Equipment',
-        image: 'https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=300&q=80',
+        image: img8,
     },
 ]
 
@@ -135,15 +145,27 @@ const Infineon = () => {
 
 
 
-                        <p className="mb-8">
+                        <motion.p
+                            interval={{ duration: 0.95, delay: 0.55 }}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, amount: 0.6 }}
+                            transition={{ duration: 0.95, delay: 0.55 }}
+
+                            className="mb-8">
 
 
                             “M/S. Infineon Engineering Solutions” is operating as an Indenting & Trading Company in Bangladesh since 2009. “M/S. Infineon Engineering Solutions” is formed with a view to supporting and assisting to our valued customer in the industrial sector promptly from both principal and local end. Our team consist of experienced as well as professional sales and service engineer who have long proven track record in the industrial sector.
-                        </p>
+                        </motion.p>
 
-                        <p className="mb-8">
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, amount: 0.6 }}
+                            transition={{ duration: 0.95, delay: 0.55 }}
+                            className="mb-8">
                             “M/S. Infineon Engineering Solutions” is operating as an Indenting & Trading Company in Bangladesh since 2009. “M/S. Infineon Engineering Solutions” is formed with a view to supporting and assisting to our valued customer in the industrial sector promptly from both principal and local end. Our team consist of experienced as well as professional sales and service engineer who have long proven track record in the industrial sector.
-                        </p>
+                        </motion.p>
 
 
                     </div>
@@ -211,6 +233,7 @@ const Infineon = () => {
                     </section>
                 </div>
                 <CooparetiveBrand />
+                <CompanyProfile />
 
             </div>
 

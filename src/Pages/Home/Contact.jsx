@@ -1,58 +1,106 @@
 
 import React from 'react';
+import { motion } from 'framer-motion'
 import logo from '../../../public/img/logo.png';
 
 const Contact = () => {
     return (
-        <div className=" min-h-screen md:p-6 p-3">
+        <div className="  md:p-6 p-3">
             <div className="w-full">
                 {/* Breadcrumb */}
-                <div className="flex items-center justify-between mb-10">
+                <div className="flex items-center justify-center mb-10">
+
+
 
                     <div
-                        className="bg-gradient-to-b from-[#FFFFFF] via-[#DDEFD2] to-[#C8E3BA] px-6 py-3 w-[300px] rounded-bl-2xl"
+                        className="bg-gradient-to-b from-[#FFFFFF] via-[#EAF4FF] to-[#D6E9FF] px-6 py-3 w-[250px] rounded-bl-2xl"
                         style={{
                             clipPath: 'polygon(0 0, 100% 0, 100% 75%, 0 100%)'
                         }}
                     >
-                        <h2 className="text-[30px]  text-[#2d2d2d]">
-                            Contact us
+                        <h2 className="md:text-[30px] text-2xl text-[#2d2d2d]">
+                            Contact Us
                         </h2>
                     </div>
 
-                    <p className="text-sm text-gray-600 md:block hidden">
-                        Current position: Home &gt; Contact us
-                    </p>
+
                 </div>
-                <div>
+                {/* <div>
                     <img src={logo} alt="Company Logo" className='w-80' />
-                </div>
+                </div> */}
 
 
 
 
                 {/* Shanghai Office */}
                 <div className="my-8">
-                    <h2 className="text-xl font-semibold text-lime-500 mb-3">INFINEON Solutions Corp.</h2>
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, amount: 0.6 }}
+                        transition={{ duration: 0.95, delay: 0.55 }}
+
+                        className="text-xl font-semibold text-blue-950 ">M/S. INFINEON ENGINEERING SOLUTIONS</motion.h2>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, amount: 0.6 }}
+                        transition={{ duration: 0.95, delay: 0.55 }}
+                        className="text-sm text-blue-950 mb-2">(We provide a complete Engineering & Business solution on pharmaceuticals & plastics industries)</motion.p>
                     <div className="space-y-1 text-gray-600 text-base">
-                        <p><span className='text-lime-500 font-bold'>Office Address:</span> 714, New Caoyang Science Building, NO.399 North Nujiang Rd, Shanghai</p>
-                        <p><span className='text-lime-500 font-bold'>Phone:</span> 0086-21-52996290</p>
-                        <p>
-                            <span className='text-lime-500 font-bold'>Email:</span> bd@infineonbd.com
-                            <span className="text-gray-400 text-sm ml-1">(Please change # to @ when you send mail)</span>
-                        </p>
-                        <p><span className='text-lime-500 font-bold'>Web:</span> www.infineonbd.com</p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, amount: 0.6 }}
+                            transition={{ duration: 0.95, delay: 0.55 }}
+                        >
+                            <span className='text-blue-950 font-bold'>Business Address:</span> House #56 (6th Floor), Road #19
+                            (Main Road), Rupnagar, Mirpur, Dhaka-1216, Bangladesh
+                        </motion.p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, amount: 0.6 }}
+                            transition={{ duration: 0.95, delay: 0.55 }}
+                        >
+                            <span className='text-blue-950 font-bold'>Telephone: </span> +88 02 580 533 51
+                        </motion.p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, amount: 0.6 }}
+                            transition={{ duration: 0.95, delay: 0.55 }}
+                        >
+                            <span className='text-blue-950 font-bold'>Cell Phone: </span> +88 01714 092663
+                        </motion.p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, amount: 0.6 }}
+                            transition={{ duration: 0.95, delay: 0.55 }}
+                        >
+                            <span className='text-blue-950 font-bold'>Email:</span> infineon@infineonbd.com
+                        </motion.p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, amount: 0.6 }}
+                            transition={{ duration: 0.95, delay: 0.55 }}
+                        >
+                            <span className='text-blue-950 font-bold'>Gmail:</span> ies.infineon@gmail.com
+                        </motion.p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, amount: 0.6 }}
+                            transition={{ duration: 0.95, delay: 0.55 }}
+                        >
+                            <span className='text-blue-950 font-bold'>Website:</span> www.infineonbd.com
+                        </motion.p>
                     </div>
                 </div>
 
-                {/* Hong Kong Office */}
-                <div>
-                    <h2 className="text-xl font-semibold text-lime-500 mb-3">INFINEON INDUSTRY LIMITED</h2>
-                    <div className="space-y-1 text-gray-600 text-base">
-                        <p><span className='text-lime-500 font-bold'>Office Address:</span> RM 508, 5/F., Wayson Commercial Building, 28 Connaught Road West, Sheung Wan, Hong Kong</p>
-                        <p><span className='text-lime-500 font-bold'>Tel:</span> 0086-21-52996290</p>
-                    </div>
-                </div>
+
             </div>
         </div>
     );

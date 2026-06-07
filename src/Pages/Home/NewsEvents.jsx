@@ -35,23 +35,22 @@ const NewsEvents = () => {
             <div className=" mx-auto px-4">
 
                 {/* Header */}
-                <div className="flex items-center justify-between mb-10">
+                <div className="flex items-center justify-center mb-10">
+
 
                     <div
-                        className="bg-gradient-to-b from-[#FFFFFF] via-[#DDEFD2] to-[#C8E3BA] px-6 py-3 w-[300px] rounded-bl-2xl"
+                        className="bg-gradient-to-b from-[#FFFFFF] via-[#EAF4FF] to-[#D6E9FF] px-6 py-3 w-[250px] rounded-bl-2xl"
                         style={{
                             clipPath: 'polygon(0 0, 100% 0, 100% 75%, 0 100%)'
                         }}
                     >
-                        <h2 className="md:text-[30px] text-2xl  text-[#2d2d2d]">
+                        <h2 className="md:text-[30px] text-xl text-[#2d2d2d]">
                             News & Events
                         </h2>
                     </div>
 
 
-                    <p className="text-sm md:block hidden text-gray-700">
-                        Current position: Home &gt; News & Events
-                    </p>
+
                 </div>
 
                 {/* News List */}
@@ -67,7 +66,7 @@ const NewsEvents = () => {
                                 className={`flex items-center gap-3 py-3 px-2 text-[15px] transition-all duration-300  text-[#444] hover:text-orange-400 hover:underline
                                     }`}
                             >
-                                <span className="text-lime-500 text-sm">
+                                <span className="text-blue-900 text-sm">
                                     ❯
                                 </span>
 
@@ -79,25 +78,7 @@ const NewsEvents = () => {
                     ))}
                 </div>
 
-                {/* Pagination */}
-                <div className="flex justify-center items-center gap-2 mt-10">
 
-                    <button className="w-6 h-6 border border-gray-300 text-gray-500 text-sm flex items-center justify-center hover:bg-gray-100">
-                        &lt;
-                    </button>
-
-                    <button className="w-6 h-6 bg-lime-600 text-white text-sm flex items-center justify-center">
-                        1
-                    </button>
-
-                    <button className="w-6 h-6 border border-gray-300 text-gray-600 text-sm flex items-center justify-center hover:bg-gray-100">
-                        2
-                    </button>
-
-                    <button className="w-6 h-6 border border-gray-300 text-gray-500 text-sm flex items-center justify-center hover:bg-gray-100">
-                        &gt;
-                    </button>
-                </div>
             </div>
         </div>
     )
