@@ -152,7 +152,7 @@ const Navbar = () => {
                   onClick={closeMenu}
                   className="block text-blue-900 font-bold"
                 >
-                  INFINEON
+                  Home
                 </Link>
 
                 <Link
@@ -160,7 +160,7 @@ const Navbar = () => {
                   onClick={closeMenu}
                   className="block text-blue-900 font-bold"
                 >
-                  About Us
+                  INFINEON
                 </Link>
 
                 <Link

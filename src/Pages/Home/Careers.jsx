@@ -31,7 +31,7 @@ const Careers = () => {
                         history, we have continued to grow and expand into new and existing
                         markets. Our growth has been the result of our customers success through
                         the dedicated and professional approach of our employees who always act
-                        positively. Working at GMPMAX is not only about a job – it’s an extension
+                        positively. Working at INFINEON is not only about a job – it’s an extension
                         to your family and friends, a desire to provide the finest and succeed,
                         to work as one and as part of a universal team, striving to be the best
                         that you can be.

@@ -129,8 +129,8 @@ const ProductService = () => {
 
                 <div>
                     <div className='max-w-4xl roman'>
-                        <p className='text-xl'>We are offering & supplying almost all kinds of machinery required in Pharmaceuticals, Plastics, Food and Beverage Industries at competitive price from China mostly and Taiwan. </p>
-                        <p className='font-semibold text-2xl mt-2'>Our range of machinery that covers the following: </p>
+                        <p className='md:text-xl text-lg'>We are offering & supplying almost all kinds of machinery required in Pharmaceuticals, Plastics, Food and Beverage Industries at competitive price from China mostly and Taiwan. </p>
+                        <p className='font-semibold md:text-2xl text-xl mt-2'>Our range of machinery that covers the following: </p>
                     </div>
                     <ProductsGrid />
                 </div>

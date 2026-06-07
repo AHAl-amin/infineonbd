@@ -52,7 +52,7 @@ function Banner() {
 
 
       <div className=' w-full'>
-        <div className='relative overflow-hidden  lg:h-[75vh] md:h-[80vh] h-[50vh]   rounded-2xl lg:-z-10'>
+        <div className='relative overflow-hidden  lg:h-[75vh] md:h-[80vh] h-[45vh]   rounded-2xl lg:-z-10'>
           <div
             className='flex h-full '
             style={{

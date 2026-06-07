@@ -8,7 +8,7 @@ const ProductsGrid = () => {
 
     return (
         <div className="py-10">
-            <div className="max-w-6xl mx-auto lg:px-0 px-4">
+            <div className="max-w-6xl mx-auto ">
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2 grid-cols-1">
                     {productsData.categories.map((cat, i) => (
                         <motion.div
@@ -20,10 +20,10 @@ const ProductsGrid = () => {
                             className="group relative rounded-2xl border border-slate-200 hover:bg-[#D6E9FF] overflow-hidden shadow-md "
 
                         >
-                            <div className="p-6">
+                            <div className="lg:p-6 p-2">
                                 <h3
                                     onMouseEnter={() => setSelectedCategory(cat)}
-                                    className="text-xl font-semibold text-slate-900 w-fit cursor-pointer border border-slate-300 hover:border-blue-400 rounded-2xl p-2"
+                                    className="md:text-xl text-lg font-semibold text-slate-900 w-fit cursor-pointer border border-slate-300 hover:border-blue-400 rounded-2xl p-2"
                                 >
                                     {cat.title}
                                 </h3>
