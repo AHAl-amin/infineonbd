@@ -31,8 +31,8 @@ const NewsEvents = () => {
     ]
 
     return (
-        <div className=" min-h-screen md:p-6 p-3 w-full">
-            <div className=" mx-auto px-4">
+        <div className=" min-h-screen lg:p-0 p-3 w-full">
+            <div className=" max-w-6xl mx-auto px-4">
 
                 {/* Header */}
                 <div className="flex items-center justify-center mb-10">

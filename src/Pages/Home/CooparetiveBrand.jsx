@@ -57,7 +57,7 @@ const CooparetiveBrand = () => {
 
     return (
         <section className="w-full overflow-hidden  py-10">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-6xl mx-auto">
                 <h2 className="text-center text-3xl font-bold text-gray-800 mb-8">
                     Our Cooperative Partners
                 </h2>

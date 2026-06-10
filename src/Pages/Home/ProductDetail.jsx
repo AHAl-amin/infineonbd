@@ -18,7 +18,7 @@ const ProductDetail = () => {
 
     return (
         <div className="py-10">
-            <div className="max-w-7xl mx-auto px-4">
+            <div className="max-w-6xl mx-auto lg:px-0 px-3">
 
 
                 <div className="grid gap-8 xl:grid-cols-[1.9fr_1fr]">
@@ -40,7 +40,7 @@ const ProductDetail = () => {
                                         </span>
                                         <span>
                                             <Link to="/product-services" className="text-blue-500 hover:text-blue-700">
-                                                Back 
+                                                Back
                                             </Link>
                                         </span>
                                     </div>

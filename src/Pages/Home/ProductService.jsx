@@ -84,8 +84,8 @@ const ProductService = () => {
     }
 
     return (
-        <div className=" min-h-screen md:p-6 p-3">
-            <div className="max-w-6xl mx-auto px-4">
+        <div className=" min-h-screen md:py-6">
+            <div className="max-w-6xl mx-auto lg:px-0 px-3">
 
                 {/* HEADER */}
                 <div className="flex items-center justify-center mb-10">

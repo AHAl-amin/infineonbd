@@ -73,7 +73,7 @@ const Infineon = () => {
             if (window.innerWidth >= 1024) {
                 setVisible(3); // lg
             } else if (window.innerWidth >= 768) {
-                setVisible(3); // md
+                setVisible(2); // md
             } else {
                 setVisible(1); // mobile
             }
@@ -164,7 +164,8 @@ const Infineon = () => {
                             viewport={{ once: false, amount: 0.6 }}
                             transition={{ duration: 0.95, delay: 0.55 }}
                             className="mb-8">
-                            “M/S. Infineon Engineering Solutions” is operating as an Indenting & Trading Company in Bangladesh since 2009. “M/S. Infineon Engineering Solutions” is formed with a view to supporting and assisting to our valued customer in the industrial sector promptly from both principal and local end. Our team consist of experienced as well as professional sales and service engineer who have long proven track record in the industrial sector.
+                            Over the years, M/S. Infineon Engineering Solutions has built a strong reputation for delivering reliable engineering solutions, quality products, and exceptional customer support. By maintaining close collaboration with internationally recognized manufacturers and technology partners, we ensure that our clients receive innovative, cost-effective, and sustainable solutions tailored to their specific industrial requirements. Our commitment to excellence, technical expertise, and customer satisfaction has enabled us to establish long-term relationships with organizations across various industries in Bangladesh.
+
                         </motion.p>
 
 

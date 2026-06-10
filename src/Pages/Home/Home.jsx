@@ -7,6 +7,8 @@ import Infineon from './Infineon'
 import ProductService from './ProductService'
 import NewsEvents from './NewsEvents'
 import Contact from './Contact'
+import Careers from './Careers'
+import { Car } from 'lucide-react'
 
 
 
@@ -18,6 +20,7 @@ const Home = () => {
       <Infineon />
       <ProductService />
       <NewsEvents />
+      <Careers />
       <Contact />
 
 

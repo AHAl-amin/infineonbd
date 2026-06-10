@@ -78,7 +78,7 @@ export default function HomeSection() {
             if (window.innerWidth >= 1024) {
                 setVisible(3); // lg
             } else if (window.innerWidth >= 768) {
-                setVisible(3); // md
+                setVisible(2); // md
             } else {
                 setVisible(1); // mobile
             }
@@ -119,7 +119,7 @@ export default function HomeSection() {
 
 
     return (
-        <div className="font-sans  w-full md:mx-auto  text-gray-700 ">
+        <div className="font-sans  max-w-6xl mx-auto  text-gray-700 ">
 
 
             <section className="">

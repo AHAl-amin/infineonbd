@@ -1,40 +1,121 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
-    FaLinkedin,
-    FaInstagram,
-    FaFacebookF,
+    FaPhoneAlt,
+    FaMobileAlt,
+    FaEnvelope,
+    FaGoogle,
+    FaWeixin,
 } from "react-icons/fa";
-import { FaX } from "react-icons/fa6";
 
 import oliullah from "../../../public/img/partner/oliullah.png";
-import sajid from "../../../public/img/partner/oliullah.png";
-
+import shibly from "../../../public/img/partner/shibly.png";
 
 const partners = [
     {
-        name: "Eng. Oliullah Monir",
-        title: "AI Strategy Partner",
-        image: oliullah,
-        linkedin: "#",
-        instagram: "#",
-        facebook: "#",
-        x: "#",
+        name: "A.K.M. Hasan Shibly Chowdhury",
+        title: "Managing Partner",
+        image: shibly,
+        contacts: [
+            {
+                label: "Telephone",
+                value: "+88 02 580 533 51",
+                href: "tel:+8800258053351",
+                icon: FaPhoneAlt,
+                color: "bg-blue-700",
+            },
+            {
+                label: "Cell Phone",
+                value: "+8801714 092663",
+                href: "tel:+8801714092663",
+                icon: FaMobileAlt,
+                color: "bg-slate-900",
+            },
+            {
+                label: "Email",
+                value: "infineon@infineonbd.com",
+                href: "mailto:infineon@infineonbd.com",
+                icon: FaEnvelope,
+                color: "bg-orange-500",
+            },
+
+            {
+                label: "WeChat",
+                value: "HASANSHIBLY",
+                href: "https://web.wechat.com/",
+                icon: FaWeixin,
+                color: "bg-emerald-500",
+            },
+        ],
     },
     {
-        name: "Sajid Khan",
-        title: "AI Product Partner",
-        image: sajid,
-        linkedin: "#",
-        instagram: "#",
-        facebook: "#",
-        x: "#",
+        name: "Engr. Md. Oliullah B.Sc Engineer (EEE)",
+        title: "Managing Partner",
+        image: oliullah,
+        contacts: [
+            {
+                label: "Telephone",
+                value: "+88 02 580 533 51",
+                href: "tel:+8800258053351",
+                icon: FaPhoneAlt,
+                color: "bg-blue-700",
+            },
+            {
+                label: "Cell Phone",
+                value: "+8801886 675811",
+                href: "tel:+8801886675811",
+                icon: FaMobileAlt,
+                color: "bg-slate-900",
+            },
+            {
+                label: "Email",
+                value: "infineon@infineonbd.com",
+                href: "mailto:infineon@infineonbd.com",
+                icon: FaEnvelope,
+                color: "bg-orange-500",
+            },
+
+            {
+                label: "WeChat",
+                value: "OLIULLAH_MONIR",
+                href: "https://web.wechat.com/",
+                icon: FaWeixin,
+                color: "bg-emerald-500",
+            },
+        ],
     },
 ];
+
+const ContactIcon = ({ item }) => {
+    const [hovered, setHovered] = useState(false);
+    const Icon = item.icon;
+
+    return (
+        <div className="relative">
+            <a
+                href={item.href}
+                target={item.href.startsWith("http") ? "_blank" : undefined}
+                rel={item.href.startsWith("http") ? "noreferrer" : undefined}
+                onMouseEnter={() => setHovered(true)}
+                onMouseLeave={() => setHovered(false)}
+                className={`${item.color} text-white p-3 rounded-full shadow-lg hover:scale-110 transition inline-flex items-center justify-center`}
+                aria-label={`${item.label}: ${item.value}`}
+            >
+                <Icon size={18} />
+            </a>
+            {hovered && (
+                <span className="absolute right-10 top-7  -translate-y-full whitespace-nowrap rounded-full bg-slate-900 px-3 py-1 text-[8px] text-white shadow-lg">
+                    {item.label}: {item.value}
+                </span>
+            )}
+        </div>
+    );
+};
 
 const CompanyProfile = () => {
     return (
         <div className="w-full mt-6 bg-white">
-            <div className="max-w-7xl mx-auto px-4">
+            <div className="max-w-6xl mx-auto px-4">
                 {/* Heading */}
                 <div className="text-center mb-12">
 
@@ -76,19 +157,19 @@ const CompanyProfile = () => {
                                     <img
                                         src={partner.image}
                                         alt={partner.name}
-                                        className=" flex border-b-2 md:h-[350px] h-[300px] border-b-[#D6E9FF] justify-center  transition-transform duration-700 group-hover:scale-101 p-7 rounded-full object-cover"
+                                        className=" flex border-b-2 md:h-[350px] h-[300px]  border-b-[#D6E9FF] justify-center  transition-transform duration-700 group-hover:scale-100 p-5 rounded-full object-cover"
                                     />
 
                                     {/* Overlay */}
                                     <div className=" " />
 
-                                    {/* Social Icons */}
+                                    {/* Contact Icons */}
                                     <div
                                         className="
                                           absolute
                                               top-1/2
                                               -translate-y-1/2
-                                                 right-[-80px]
+                                                 right-[-96px]
                                                    flex
                                                       flex-col
                                                            gap-3
@@ -97,33 +178,9 @@ const CompanyProfile = () => {
                                                                 group-hover:right-5
                                                                "
                                     >
-                                        <a
-                                            href={partner.linkedin}
-                                            className="bg-[#0A66C2] text-white p-3 rounded-full shadow-lg hover:scale-110 transition"
-                                        >
-                                            <FaLinkedin size={18} />
-                                        </a>
-
-                                        <a
-                                            href={partner.instagram}
-                                            className="bg-[#E4405F] text-white p-3 rounded-full shadow-lg hover:scale-110 transition"
-                                        >
-                                            <FaInstagram size={18} />
-                                        </a>
-
-                                        <a
-                                            href={partner.facebook}
-                                            className="bg-[#1877F2] text-white p-3 rounded-full shadow-lg hover:scale-110 transition"
-                                        >
-                                            <FaFacebookF size={18} />
-                                        </a>
-
-                                        <a
-                                            href={partner.x}
-                                            className="bg-black text-white p-3 rounded-full shadow-lg hover:scale-110 transition"
-                                        >
-                                            <FaX size={18} />
-                                        </a>
+                                        {partner.contacts.map((item) => (
+                                            <ContactIcon key={item.label} item={item} />
+                                        ))}
                                     </div>
                                 </div>
 
@@ -137,10 +194,10 @@ const CompanyProfile = () => {
                                             duration: 0.5,
                                             delay: index * 0.3,
                                         }}
-                                        className="bg-[#D6E9FF] backdrop-blur-sm rounded-r-full rounded-l-lg py-2 pl-5 pr-12 inline-block"
+                                        className="bg-gradient-to-r from-[#fefdfd] via-[#EAF4FF] to-[#D6E9FF]  backdrop-blur-sm rounded-r-full w-full rounded-l-lg py-2 pl-5 pr-12 inline-block"
                                     >
-                                        <h3 className="text-xl font-bold text-slate-900">
-                                            {partner.name}
+                                        <h3 className="text-lg leading-tight font-bold text-slate-900">
+                                            {index === 0 ? <p>A.K.M. Hasan Shibly Chowdhury</p> : <p>Engr. Md. Oliullah <br />  B.Sc Engineer (EEE)</p>}
                                         </h3>
 
                                         <p className="text-sm text-slate-600">

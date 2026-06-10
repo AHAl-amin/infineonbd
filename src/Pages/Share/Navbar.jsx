@@ -1,7 +1,7 @@
 
 
 
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 import { IoSearch, IoMenu, IoClose, IoCallOutline } from 'react-icons/io5';
@@ -10,6 +10,7 @@ import logo from '../../../public/img/logo.jpeg';
 const Navbar = () => {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const activeClass =
     'text-gray-300 border-b-2 border-gray-300 font-bold';
@@ -21,12 +22,14 @@ const Navbar = () => {
   return (
     <div>
       <nav className="py-3 sticky top-0 left-0 right-0 z-50 w-full shadow-black/20 bg-white max-w-6xl mx-auto">
-        <div className="container mx-auto ">
+        <div className="max-w-6xl mx-auto ">
           {/* TOP NAV */}
           <div className="flex justify-between items-center">
             {/* LOGO */}
             <div className="flex items-center md:gap-4 gap-2">
-              <div className="">
+              <div
+                onClick={() => navigate('/')}
+                className="cursor-pointer">
                 <img src={logo} alt="Logo" className="md:h-17 h-9 md:w-auto w-12" />
               </div>
 
