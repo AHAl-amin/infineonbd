@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import productsData from '../../data/products.json'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { FaHandPointRight } from 'react-icons/fa'
+import { LiaHandPointRightSolid } from 'react-icons/lia'
 
 const ProductsGrid = () => {
     const [selectedCategory, setSelectedCategory] = useState(null)
 
     return (
-        <div className="py-10">
+        <div className="py-3">
             <div className="max-w-6xl mx-auto ">
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2 grid-cols-1">
                     {productsData.categories.map((cat, i) => (
@@ -22,10 +24,10 @@ const ProductsGrid = () => {
                         >
                             <div className="lg:p-6 p-2">
                                 <h3
-                                    onMouseEnter={() => setSelectedCategory(cat)}
-                                    className="md:text-xl text-lg font-semibold text-slate-900 w-fit cursor-pointer border border-slate-300 hover:border-blue-400 rounded-2xl p-2"
+                                    onClick={() => setSelectedCategory(cat)}
+                                    className="md:text-xl text-lg font-semibold text-slate-900 w-fit cursor-pointer border border-slate-300 hover:border-blue-400 rounded-2xl p-2 flex items-center gap-1 "
                                 >
-                                    {cat.title}
+                                    <LiaHandPointRightSolid className="text-blue-950 size-6" />{cat.title}
                                 </h3>
                                 <p
 
@@ -44,12 +46,16 @@ const ProductsGrid = () => {
             </div>
 
             {selectedCategory && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 p-4">
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 p-4"
+                    onClick={() => setSelectedCategory(null)}
+                >
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 30 }}
                         className="relative w-full max-w-3xl rounded-3xl bg-white shadow-2xl"
+                        onClick={(e) => e.stopPropagation()}
                     >
                         <div className="flex items-center justify-between border-b border-slate-200 px-6 py-4">
                             <div>
@@ -59,7 +65,7 @@ const ProductsGrid = () => {
                             <button
                                 type="button"
                                 onClick={() => setSelectedCategory(null)}
-                                className="text-slate-500 transition hover:text-slate-900"
+                                className="text-slate-500 transition hover:text-slate-900 cursor-pointer"
                             >
                                 Close
                             </button>

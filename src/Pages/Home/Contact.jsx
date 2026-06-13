@@ -42,7 +42,7 @@ const Contact = () => {
                             viewport={{ once: false, amount: 0.6 }}
                             transition={{ duration: 0.95, delay: 0.55 }}
 
-                            className="text-xl font-semibold text-blue-950 ">M/S. INFINEON ENGINEERING SOLUTIONS</motion.h2>
+                            className="text-xl font-semibold text-blue-950 ">INFINEON ENGINEERING SOLUTIONS</motion.h2>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}

@@ -7,6 +7,8 @@ import img5 from '../../../public/img/products/product-5.png'
 import img6 from '../../../public/img/products/product-6.png'
 import img7 from '../../../public/img/products/product-7.png'
 import img8 from '../../../public/img/products/product-8.png'
+import img9 from '../../../public/img/products/product-9.png'
+import img10 from '../../../public/img/products/product-10.png'
 
 import ProductDetail from './ProductDetail'
 import ProductsGrid from './ProductsGrid'
@@ -18,43 +20,53 @@ const ProductService = () => {
     const products = [
         {
             id: 1,
-            title: 'Pharmaceuticals Machinery ',
+            title: 'Pharmaceuticals Machineries ',
             image: img1,
         },
         {
             id: 2,
-            title: 'Plastics Machinery & Mould ',
+            title: '⁠Purified Water Generation & Distribution System',
             image: img2,
         },
         {
             id: 3,
-            title: 'Medical Equipment Machinery',
+            title: 'Plastics Machineries',
             image: img3,
         },
         {
             id: 4,
-            title: 'Drinking Water Production Line ',
+            title: 'Plastics Moulds ',
             image: img4,
         },
         {
             id: 5,
-            title: 'Packaging, Labelling & Printing ',
+            title: 'Medical Equipments Machineries ',
             image: img5,
         },
         {
             id: 6,
-            title: 'Cleanroom and HVAC System ',
+            title: 'Drinking Water Production Machineries ',
             image: img6,
         },
         {
             id: 7,
-            title: 'Warehouse Equipment ',
+            title: 'Packaging, Printing & Labelling Machineries ',
             image: img7,
         },
         {
             id: 8,
-            title: 'Others Machinery & Equipment',
+            title: 'Cleanroom and HVAC System',
             image: img8,
+        },
+        {
+            id: 9,
+            title: 'Warehouse Equipments',
+            image: img9,
+        },
+        {
+            id: 10,
+            title: 'Others Machineries & Equipments',
+            image: img10,
         },
 
 
@@ -116,7 +128,7 @@ const ProductService = () => {
                                 <img
                                     src={product.image}
                                     alt={product.title}
-                                    className="w-full max-h-[100px] object-contain transition-all duration-500 group-hover:scale-105"
+                                    className="w-full h-[100px]  object-contain transition-all duration-500 group-hover:scale-105"
                                 />
                             </div>
 
@@ -127,12 +139,52 @@ const ProductService = () => {
                     ))}
                 </div>
 
-                <div>
-                    <div className='max-w-4xl roman'>
-                        <p className='md:text-xl text-lg'>We are offering & supplying almost all kinds of machinery required in Pharmaceuticals, Plastics, Food and Beverage Industries at competitive price from China mostly and Taiwan. </p>
-                        <p className='font-semibold md:text-2xl text-xl mt-2'>Our range of machinery that covers the following: </p>
+                <div className="space-y-4">
+                    <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
+                        <div className="space-y-5">
+                            <div>
+                                <p className="text-sm uppercase tracking-[0.24em] text-blue-800 font-semibold">What we supply</p>
+                                <h3 className="text-2xl md:text-3xl font-bold text-slate-900">Machinery, Spares & Parts with fast delivery</h3>
+                            </div>
+
+                            <p className="md:text-xl text-lg text-slate-700 leading-relaxed">
+                                We offer and supply all essential machinery for Pharmaceuticals, Plastics, Food and Beverage industries at competitive prices. Our machines are sourced from trusted partners in China and Taiwan, with flexible local payment options and fast delivery for your existing plant requirements.
+                            </p>
+
+                            <div className="grid gap-4 md:grid-cols-2">
+                                <div className="rounded-2xl bg-white p-5 border border-slate-200 shadow-sm">
+                                    <h4 className="text-lg font-semibold text-slate-900">Complete Spares Supply</h4>
+                                    <p className="text-sm text-slate-600 mt-2">
+                                        Consumable spares and electronic parts from any brand or origin, matched to your installed equipment.
+                                    </p>
+                                </div>
+                                <div className="rounded-2xl bg-white p-5 border border-slate-200 shadow-sm">
+                                    <h4 className="text-lg font-semibold text-slate-900">Short lead time</h4>
+                                    <p className="text-sm text-slate-600 mt-2">
+                                        Rapid sourcing from China with support for your local payment policy, helping minimize downtime.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <p className="font-semibold md:text-2xl text-xl text-slate-900">
+                        Our range of machinery that covers the following:
+                    </p>
+
                     <ProductsGrid />
+
+                    <div className="rounded-3xl border border-slate-200 bg-white p-8  mb-3 shadow-sm">
+                        <div className="max-w-4xl space-y-4 ">
+                            <p className="md:text-xl text-lg text-slate-700 leading-relaxed">
+
+
+                                Also, we supply any essential, consumable Spares & electronic parts/components (any brand  from any origin) of your existing machines from China end within very shortest possible time under your company local payment policy.
+                            </p>
+                            <p className="font-semibold md:text-xl text-xl text-slate-900">
+                                We will be highly pleased if you check the attached at a glance in order to check our credibility & forward us your valuable any inquiry for Machinery & Spares that may require in your existing plant.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
 

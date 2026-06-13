@@ -8,49 +8,41 @@ import { FaAngleRight, FaChevronLeft } from 'react-icons/fa'
 import CooparetiveBrand from './CooparetiveBrand';
 import CompanyProfile from './CompanyProfile';
 import { motion } from 'framer-motion';
-import img1 from '../../../public/img/products/product-1.png'
-import img2 from '../../../public/img/products/product-2.png'
-import img3 from '../../../public/img/products/product-3.png'
-import img4 from '../../../public/img/products/product-4.png'
-import img5 from '../../../public/img/products/product-5.png'
+
 import img6 from '../../../public/img/products/product-6.png'
 import img7 from '../../../public/img/products/product-7.png'
 import img8 from '../../../public/img/products/product-8.png'
+import img9 from '../../../public/img/products/product-9.png'
+import img10 from '../../../public/img/products/product-10.png'
 
 
 const products = [
+
     {
-        name: 'Pharmaceuticals Machinery',
-        image: img1,
-    },
-    {
-        name: 'Plastics Machinery & Mould ',
-        image: img2,
-    },
-    {
-        name: 'Medical Equipment Machinery ',
-        image: img3,
-    },
-    {
-        name: 'Drinking Water Production Line ',
-        image: img4,
-    },
-    {
-        name: 'Packaging, Labelling & Printing',
-        image: img5,
-    },
-    {
-        name: 'Warehouse Equipment ',
+        id: 1,
+        title: 'Drinking Water Production Machineries ',
         image: img6,
     },
     {
-        name: 'Cleanroom and HVAC System ',
+        id: 2,
+        title: 'Packaging, Printing & Labelling Machineries ',
         image: img7,
     },
     {
-        name: 'Others Machinery & Equipment',
+        id: 3,
+        title: 'Cleanroom and HVAC System',
         image: img8,
     },
+    {
+        id: 4,
+        title: 'Warehouse Equipments',
+        image: img9,
+    },
+    {
+        id: 5,
+        title: 'Others Machineries & Equipments',
+        image: img10,
+    }
 ]
 
 const newsItems = [
@@ -204,17 +196,17 @@ const Infineon = () => {
                                     {products.map((product, i) => (
                                         <div
                                             key={i}
-                                            className="flex-shrink-0  text-center  flex flex-col justify-center items-center "
+                                            className="flex-shrink-0 w-full text-center gap-2     flex flex-col justify-center items-center "
                                             style={{ width: `${100 / visible}%` }}
                                         >
                                             <img
                                                 src={product.image}
-                                                alt={product.name}
-                                                className={` shadow-[0_0_10px_rgba(0,0,0,0.3)] object-cover rounded-sm  bg-gray-100 ${i === currentIndex ? '' : ''
+                                                alt={product.title}
+                                                className={`  h-[150px] shadow-[0_0_10px_rgba(0,0,0,0.3)] bg-gray-100 object-contain p-4  rounded-sm   ${i === currentIndex ? '' : ''
                                                     }`}
                                             />
                                             <p className="text-sm mx-2 mt-8 hover:underline hover:text-orange-400 text-gray-600 leading-tight  line-clamp-2 cursor-pointer">
-                                                {product.name}
+                                                {product.title}
                                             </p>
                                         </div>
                                     ))}

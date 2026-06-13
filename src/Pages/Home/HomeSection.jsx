@@ -24,37 +24,30 @@ const Pill = ({ children }) => (
 
 const products = [
     {
-        name: 'Pharmaceuticals Machinery',
+        id: 1,
+        title: 'Pharmaceuticals Machineries ',
         image: img1,
     },
     {
-        name: 'Plastics Machinery & Mould ',
+        id: 2,
+        title: '⁠Purified Water Generation & Distribution System',
         image: img2,
     },
     {
-        name: 'Medical Equipment Machinery ',
+        id: 3,
+        title: 'Plastics Machineries',
         image: img3,
     },
     {
-        name: 'Drinking Water Production Line ',
+        id: 4,
+        title: 'Plastics Moulds ',
         image: img4,
     },
     {
-        name: 'Packaging, Labelling & Printing',
+        id: 5,
+        title: 'Medical Equipments Machineries ',
         image: img5,
-    },
-    {
-        name: 'Warehouse Equipment ',
-        image: img6,
-    },
-    {
-        name: 'Cleanroom and HVAC System ',
-        image: img7,
-    },
-    {
-        name: 'Others Machinery & Equipment',
-        image: img8,
-    },
+    }
 ]
 
 const newsItems = [
@@ -167,17 +160,17 @@ export default function HomeSection() {
                             {products.map((product, i) => (
                                 <div
                                     key={i}
-                                    className="flex-shrink-0  text-center  flex flex-col justify-center items-center "
+                                    className="flex-shrink-0 w-full text-center gap-2     flex flex-col justify-center items-center "
                                     style={{ width: `${100 / visible}%` }}
                                 >
                                     <img
                                         src={product.image}
-                                        alt={product.name}
-                                        className={` shadow-[0_0_10px_rgba(0,0,0,0.3)] object-cover rounded-sm  bg-gray-100 ${i === currentIndex ? '' : ''
+                                        alt={product.title}
+                                        className={`  h-[150px] shadow-[0_0_10px_rgba(0,0,0,0.3)] bg-gray-100 object-contain p-4  rounded-sm   ${i === currentIndex ? '' : ''
                                             }`}
                                     />
                                     <p className="text-sm mx-2 mt-8 hover:underline hover:text-orange-400 text-gray-600 leading-tight  line-clamp-2 cursor-pointer">
-                                        {product.name}
+                                        {product.title}
                                     </p>
                                 </div>
                             ))}

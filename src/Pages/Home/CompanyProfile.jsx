@@ -125,9 +125,8 @@ const CompanyProfile = () => {
                     </h1>
 
                     <p className="max-w-3xl mx-auto mt-4 text-slate-600">
-                        Meet the core AI partners driving innovation at Infineon BD.
-                        Each partner brings a unique combination of strategy,
-                        technology, and leadership to deliver world-class solutions.
+                        Meet the key partners behind Infineon BD’s engineering and industrial solutions.
+                        Each leader brings deep technical expertise, industry experience, and customer-focused service to support pharmaceutical, plastics, and manufacturing clients across Bangladesh.
                     </p>
                 </div>
 

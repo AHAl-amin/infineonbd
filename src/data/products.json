@@ -1,33 +1,33 @@
 {
     "categories": [
         {
-            "id": "solid-doses",
-            "title": "Solid Doses Machineries",
+            "id": "pharmaceuticals-machineries",
+            "title": "Pharmaceuticals Machineries",
             "image": "",
             "items": [
                 {
-                    "id": "rapid-mixer-granulator",
-                    "name": "Rapid Mixer Granulator",
+                    "id": "solid-dosages-machineries",
+                    "name": "Solid Dosages Machineries",
                     "description": "High-efficiency granulation for tablet production."
                 },
                 {
-                    "id": "fluid-bed-dryer-processor",
-                    "name": "Fluid Bed Dryer/Processor",
+                    "id": "liquid-processing-machineries",
+                    "name": "Liquid Processing Machineries",
                     "description": "Uniform drying for powders and granules."
                 },
                 {
-                    "id": "cone-blender-machine",
-                    "name": "Cone Blender Machine",
+                    "id": "iv-fluid-machineries",
+                    "name": "IV Fluid Machineries",
                     "description": "Gentle, homogenous powder blending for batch processing."
                 },
                 {
-                    "id": "multi-mill-fitz-mill",
-                    "name": "Multi Mill / Fitz Mill",
+                    "id": "injectable-machineries",
+                    "name": "Injectable Machineries",
                     "description": "Precision size reduction with consistent particle control."
                 },
                 {
-                    "id": "vibrating-shifter-machine",
-                    "name": "Vibrating Shifter Machine",
+                    "id": "lab-furnitures-pharma",
+                    "name": "Lab Furnitures",
                     "description": "Efficient particle sizing and screening for quality output."
                 },
                 {
@@ -78,10 +78,25 @@
             ]
         },
         {
-            "id": "liquid-injectable",
-            "title": "Liquid, Injectable & IV Fluids",
+            "id": "purified-water-generation",
+            "title": "Purified Water Generation & Distribution System",
             "image": "",
             "items": [
+                {
+                    "id": "pw-generation",
+                    "name": "Purified Water (PW) Generation",
+                    "description": "Validated purified water systems for pharmaceutical applications."
+                },
+                {
+                    "id": "wfi-generation",
+                    "name": "Water for Injection (WFI) Generation",
+                    "description": "High-purity WFI generation for sterile production."
+                },
+                {
+                    "id": "psg-generation",
+                    "name": "Pure Steam Generation (PSG)",
+                    "description": "Clean steam production for sterilization and utilities."
+                },
                 {
                     "id": "emulsifying-homogenizer",
                     "name": "Emulsifying/Homogenizer",
@@ -119,7 +134,7 @@
                 },
                 {
                     "id": "oral-dose-production-machine",
-                    "name": "Oral Does Production Machine",
+                    "name": "Oral Dose Production Machine",
                     "description": "Accurate liquid dose production for oral medications."
                 },
                 {
@@ -145,106 +160,93 @@
             ]
         },
         {
-            "id": "water-generation-utilities",
-            "title": "Water Generation Utilities",
+            "id": "plastics-moulds",
+            "title": "Plastics Moulds",
             "image": "",
             "items": [
                 {
-                    "id": "pw-generation-plant",
-                    "name": "Purified Water (PW) Generation plant",
-                    "description": "Validated purified water systems for pharma use."
+                    "id": "pet-moulds",
+                    "name": "PET Moulds",
+                    "description": "Precision molds for PET bottle production and containers."
                 },
                 {
-                    "id": "wfi-generation-plant",
-                    "name": "Water for Injection (WFI) Generation plant",
-                    "description": "High-purity WFI generation for sterile production."
+                    "id": "pp-moulds",
+                    "name": "PP Moulds",
+                    "description": "Durable molds for polypropylene products and packaging."
                 },
                 {
-                    "id": "pure-steam-generation-plant",
-                    "name": "Pure Steam Generation (PSG) plant",
-                    "description": "Clean steam production for sterilization and utilities."
+                    "id": "pvc-moulds",
+                    "name": "PVC Moulds",
+                    "description": "Custom molds for PVC applications and products."
                 },
                 {
-                    "id": "water-distillation-system",
-                    "name": "Water Distillation System",
-                    "description": "Robust distillation for high-purity water supply."
+                    "id": "abs-moulds",
+                    "name": "ABS Moulds",
+                    "description": "High-strength molds for ABS plastic components."
                 },
                 {
-                    "id": "cip-sip-generation-system",
-                    "name": "CIP/SIP Generation system",
-                    "description": "Automated cleaning and sterilization systems."
+                    "id": "ldpe-moulds",
+                    "name": "LDPE Moulds",
+                    "description": "Flexible molds for low-density polyethylene products."
                 },
                 {
-                    "id": "cleaning-loop-system",
-                    "name": "Cleaning Loop system",
-                    "description": "Process loop cleaning for GMP compliance."
-                },
-                {
-                    "id": "storage-manufacturing-vessel",
-                    "name": "Storage/ Manufacturing Vessel",
-                    "description": "Sanitary storage vessels for water and process fluids."
+                    "id": "hdpe-moulds",
+                    "name": "HDPE Moulds",
+                    "description": "Heavy-duty molds for high-density polyethylene containers."
                 }
             ]
         },
         {
-            "id": "clean-room-equipment",
-            "title": "Clean Room Equipment",
+            "id": "medical-equipments-machineries",
+            "title": "Medical Equipments Machineries",
             "image": "",
             "items": [
                 {
-                    "id": "sandwich-panels-system",
-                    "name": "Sandwich panels system",
-                    "description": "Modular cleanroom wall systems for airtight environments."
+                    "id": "production-machineries",
+                    "name": "Production Machineries",
+                    "description": "Advanced machinery for medical equipment manufacturing and assembly."
                 },
                 {
-                    "id": "hvac-with-ducting-system",
-                    "name": "HVAC with ducting system",
-                    "description": "Precision climate control and air handling for clean spaces."
+                    "id": "assembly-machineries",
+                    "name": "Assembly Machineries",
+                    "description": "Precision assembly equipment for medical device components."
                 },
                 {
-                    "id": "sampling-dispensing-booth",
-                    "name": "Sampling and Dispensing Booth",
-                    "description": "Secure containment for sterile sampling operations."
+                    "id": "printing-machineries-medical",
+                    "name": "Printing Machineries",
+                    "description": "Specialized printing for medical device labeling and marking."
                 },
                 {
-                    "id": "stability-chamber-system",
-                    "name": "Stability chamber system",
-                    "description": "Controlled stability testing for product validation."
+                    "id": "packaging-machineries-medical",
+                    "name": "Packaging Machineries",
+                    "description": "Sterile packaging solutions for medical equipment and devices."
                 },
                 {
-                    "id": "laminar-air-flow-system",
-                    "name": "Laminar Air Flow system",
-                    "description": "Uniform particulate-free airflow for critical tasks."
+                    "id": "sterilization-machineries",
+                    "name": "Sterilization Machineries",
+                    "description": "Advanced sterilization equipment for medical product processing."
+                }
+            ]
+        },
+        {
+            "id": "drinking-water-production",
+            "title": "Drinking Water Production Machineries",
+            "image": "",
+            "items": [
+                {
+                    "id": "water-treatment-machineries",
+                    "name": "Water Treatment Machineries",
+                    "description": "Advanced systems for purification and treatment of drinking water."
                 },
                 {
-                    "id": "biosafety-cabinet",
-                    "name": "Biosafety Cabinet",
-                    "description": "Safe biological containment for laboratory work."
+                    "id": "bottle-washing-filling-capping",
+                    "name": "Bottle Washing-Filling-Capping Machineries",
+                    "description": "Integrated line for washing, filling, and capping water bottles."
                 },
                 {
-                    "id": "lab-furnitures",
-                    "name": "Lab Furnitures",
-                    "description": "Ergonomic and hygienic furniture for cleanroom labs."
-                },
-                {
-                    "id": "air-shower-system",
-                    "name": "Air Shower system",
-                    "description": "Particle reduction entry system for cleanrooms."
-                },
-                {
-                    "id": "eye-shower-emergency-shower",
-                    "name": "Eye Shower/Emergency Shower",
-                    "description": "Safety showers for immediate decontamination."
-                },
-                {
-                    "id": "particle-counters",
-                    "name": "Particle Counters",
-                    "description": "Real-time airborne particle monitoring."
-                },
-                {
-                    "id": "shoe-cover-dispenser",
-                    "name": "Shoe Cover Dispenser",
-                    "description": "Hygienic shoe cover dispensing for cleanroom entry."
+                    "id": "packaging-machineries-water",
+                    "name": "Packaging Machineries",
+                    "description": "Complete packaging solutions for drinking water products."
                 }
             ]
         },
@@ -255,13 +257,8 @@
             "items": [
                 {
                     "id": "injection-molding-machine",
-                    "name": "Injection Molding Machine",
+                    "name": "Injection Molding (IMM) Machine",
                     "description": "High-precision plastic molding for parts and components."
-                },
-                {
-                    "id": "blow-molding-machine",
-                    "name": "Blow Molding Machine",
-                    "description": "Efficient bottle and hollow part production."
                 },
                 {
                     "id": "injection-blow-molding-machine",
@@ -272,6 +269,11 @@
                     "id": "extrusion-blow-molding-machine",
                     "name": "Extrusion Blow Molding (EBM) Machine",
                     "description": "Large-volume hollow product manufacturing."
+                },
+                {
+                    "id": "inline-stretch-blow-molding",
+                    "name": "Inline Stretch Blow Molding (ISBM) Machine",
+                    "description": "Integrated stretch-blow process for premium containers."
                 },
                 {
                     "id": "pipe-extrusion-complete-line",
@@ -286,10 +288,25 @@
             ]
         },
         {
-            "id": "packaging-labeling-printing",
-            "title": "Packaging, Labeling & Printing Machinery",
+            "id": "packaging-printing-labelling",
+            "title": "Packaging, Printing & Labelling Machineries",
             "image": "",
             "items": [
+                {
+                    "id": "packaging-machineries-ppl",
+                    "name": "Packaging Machineries",
+                    "description": "Complete packaging solutions for various products."
+                },
+                {
+                    "id": "printing-machineries-ppl",
+                    "name": "Printing Machineries (Cap, Body)",
+                    "description": "Decorative and functional printing for packaging."
+                },
+                {
+                    "id": "labelling-machineries",
+                    "name": "Labelling Machineries",
+                    "description": "Accurate and efficient label application systems."
+                },
                 {
                     "id": "sticker-labelling-machine",
                     "name": "Sticker Labelling Machine",
@@ -328,8 +345,85 @@
             ]
         },
         {
-            "id": "ware-house-equipment",
-            "title": "Ware House Equipment",
+            "id": "cleanroom-hvac-system",
+            "title": "Cleanroom and HVAC System",
+            "image": "",
+            "items": [
+                {
+                    "id": "sandwich-panels-system",
+                    "name": "Sandwich Panel System",
+                    "description": "Modular cleanroom wall systems for airtight environments."
+                },
+                {
+                    "id": "panel-accessories",
+                    "name": "Panel Accessories",
+                    "description": "Complete accessory solutions for cleanroom panels."
+                },
+                {
+                    "id": "air-handling-system",
+                    "name": "Air Handling System",
+                    "description": "Precision climate control and air handling for clean spaces."
+                },
+                {
+                    "id": "air-filtration-equipments",
+                    "name": "Air Filtration Equipments",
+                    "description": "Advanced filtration for maintaining cleanroom integrity."
+                },
+                {
+                    "id": "cooling-tower",
+                    "name": "Cooling Tower",
+                    "description": "Efficient cooling solutions for HVAC systems."
+                },
+                {
+                    "id": "sampling-dispensing-booth",
+                    "name": "Sampling and Dispensing Booth",
+                    "description": "Secure containment for sterile sampling operations."
+                },
+                {
+                    "id": "stability-chamber-system",
+                    "name": "Stability chamber system",
+                    "description": "Controlled stability testing for product validation."
+                },
+                {
+                    "id": "laminar-air-flow-system",
+                    "name": "Laminar Air Flow system",
+                    "description": "Uniform particulate-free airflow for critical tasks."
+                },
+                {
+                    "id": "biosafety-cabinet",
+                    "name": "Biosafety Cabinet",
+                    "description": "Safe biological containment for laboratory work."
+                },
+                {
+                    "id": "lab-furnitures-clean",
+                    "name": "Lab Furnitures",
+                    "description": "Ergonomic and hygienic furniture for cleanroom labs."
+                },
+                {
+                    "id": "air-shower-system",
+                    "name": "Air Shower system",
+                    "description": "Particle reduction entry system for cleanrooms."
+                },
+                {
+                    "id": "eye-shower-emergency-shower",
+                    "name": "Eye Shower/Emergency Shower",
+                    "description": "Safety showers for immediate decontamination."
+                },
+                {
+                    "id": "particle-counters",
+                    "name": "Particle Counters",
+                    "description": "Real-time airborne particle monitoring."
+                },
+                {
+                    "id": "shoe-cover-dispenser",
+                    "name": "Shoe Cover Dispenser",
+                    "description": "Hygienic shoe cover dispensing for cleanroom entry."
+                }
+            ]
+        },
+        {
+            "id": "warehouse-equipments",
+            "title": "Warehouse Equipments",
             "image": "",
             "items": [
                 {
@@ -338,14 +432,29 @@
                     "description": "Heavy-duty storage racks for warehouse optimization."
                 },
                 {
-                    "id": "plastic-pallets",
-                    "name": "Plastic Pallets",
-                    "description": "Durable pallets for hygienic storage and transport."
+                    "id": "electric-pallet-trucks",
+                    "name": "Electric Pallet Trucks",
+                    "description": "Motorized pallet handling for efficient warehouse operations."
                 },
                 {
-                    "id": "hand-pallet",
-                    "name": "Hand Pallet",
+                    "id": "hand-pallet-truck",
+                    "name": "Hand Pallet Truck",
                     "description": "Manual pallet handling for light warehouse loads."
+                },
+                {
+                    "id": "forklift",
+                    "name": "Fork Lift",
+                    "description": "Reliable material handling for heavy goods."
+                },
+                {
+                    "id": "scissor-lift",
+                    "name": "Scissor Lift",
+                    "description": "Safe vertical access for maintenance and inventory."
+                },
+                {
+                    "id": "hdpe-plastic-pallets",
+                    "name": "HDPE Plastic Pallets",
+                    "description": "Durable plastic pallets for hygienic storage and transport."
                 },
                 {
                     "id": "reach-truck",
@@ -353,19 +462,9 @@
                     "description": "Efficient aisle handling for elevated storage."
                 },
                 {
-                    "id": "forklift",
-                    "name": "Forklift",
-                    "description": "Reliable material handling for heavy goods."
-                },
-                {
                     "id": "order-picker",
                     "name": "Order Picker",
                     "description": "Fast order fulfillment in warehouse environments."
-                },
-                {
-                    "id": "scissor-lift",
-                    "name": "Scissor Lift",
-                    "description": "Safe vertical access for maintenance and inventory."
                 },
                 {
                     "id": "shutter-door",
@@ -375,8 +474,8 @@
             ]
         },
         {
-            "id": "others-equipment",
-            "title": "OTHERS EQUIPMENTS",
+            "id": "others-machineries-equipments",
+            "title": "Others Machineries & Equipments",
             "image": "",
             "items": [
                 {
