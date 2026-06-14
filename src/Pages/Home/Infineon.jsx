@@ -1,8 +1,6 @@
 
-import { Home } from 'lucide-react';
-import logo from '../../../public/img/logo.png';
 import HomeSection from './HomeSection';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useMemo, useRef } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { FaAngleRight, FaChevronLeft } from 'react-icons/fa'
 import CooparetiveBrand from './CooparetiveBrand';
@@ -45,64 +43,94 @@ const products = [
     }
 ]
 
-const newsItems = [
-    'Rethinking the Future-New Business Models for Pharma',
-    'Who Stands To Gain With FDA Approval Of OTC Lipitor?',
-    "Pharma's Wild Ride In China",
-    'China Strong Economic Growth & Healthcare Investments Generate Succa...',
-    'The China Pharmaceutical Market',
-    'Top Emerging Pharmaceutical Markets',
-    '5 Stainless Steel BEC drive',
-]
-
 const Infineon = () => {
 
     const [currentIndex, setCurrentIndex] = useState(0)
-    const [visible, setVisible] = useState(3);
+    const [visible, setVisible] = useState(3)
+    const [transition, setTransition] = useState(true)
+    const trackRef = useRef(null)
+
+    const slides = useMemo(() => products, [])
+    const extendedSlides = useMemo(
+        () => [
+            ...slides.slice(-visible),
+            ...slides,
+            ...slides.slice(0, visible),
+        ],
+        [slides, visible]
+    )
 
     useEffect(() => {
         const updateVisible = () => {
             if (window.innerWidth >= 1024) {
-                setVisible(3); // lg
+                setVisible(3)
             } else if (window.innerWidth >= 768) {
-                setVisible(2); // md
+                setVisible(2)
             } else {
-                setVisible(1); // mobile
+                setVisible(1)
             }
-        };
+        }
 
-        updateVisible();
+        updateVisible()
 
-        window.addEventListener('resize', updateVisible);
+        window.addEventListener('resize', updateVisible)
 
-        return () => window.removeEventListener('resize', updateVisible);
-    }, []);
+        return () => window.removeEventListener('resize', updateVisible)
+    }, [])
+
+    useEffect(() => {
+        setCurrentIndex(visible)
+    }, [visible])
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentIndex((prev) =>
-                prev >= products.length - visible ? 0 : prev + 1
-            )
+            setCurrentIndex((prev) => prev + 1)
         }, 3000)
 
         return () => clearInterval(interval)
-    }, [products.length, visible])
+    }, [visible])
+
+    useEffect(() => {
+        if (currentIndex === slides.length + visible) {
+            setTimeout(() => {
+                setTransition(false)
+                setCurrentIndex(visible)
+            }, 300)
+            setTimeout(() => {
+                setTransition(true)
+            }, 350)
+        }
+    }, [currentIndex, slides.length, visible])
 
     const handleNext = () => {
-        setCurrentIndex((prev) =>
-            prev >= products.length - visible ? 0 : prev + 1
-        )
+        setCurrentIndex((prev) => prev + 1)
     }
 
     const handlePrev = () => {
-        setCurrentIndex((prev) =>
-            prev === 0 ? products.length - visible : prev - 1
-        )
+        setCurrentIndex((prev) => prev - 1)
     }
 
-    const maxShift = products.length - visible
-    const shiftIndex = Math.min(Math.max(currentIndex, 0), maxShift)
-    const translateX = -(shiftIndex * (100 / visible))
+    const translateX = -(currentIndex * (100 / visible))
+
+    const handleTransitionEnd = () => {
+        if (currentIndex >= visible + slides.length) {
+            setTransition(false)
+            setCurrentIndex(visible)
+            requestAnimationFrame(() => {
+                trackRef.current?.offsetWidth
+                setTransition(true)
+            })
+        }
+
+        if (currentIndex < visible) {
+            setTransition(false)
+            setCurrentIndex(visible + slides.length - 1)
+            requestAnimationFrame(() => {
+                trackRef.current?.offsetWidth
+                setTransition(true)
+            })
+        }
+    }
 
     return (
         <div className="  " id='about'>
@@ -190,22 +218,26 @@ const Infineon = () => {
                             {/* Carousel Track */}
                             <div className="flex-1 overflow-hidden">
                                 <div
-                                    className="flex transition-transform duration-300 ease-in-out"
-                                    style={{ transform: `translateX(${translateX}%)` }}
+                                    ref={trackRef}
+                                    className="flex"
+                                    onTransitionEnd={handleTransitionEnd}
+                                    style={{
+                                        transform: `translateX(${translateX}%)`,
+                                        transition: transition ? 'transform 300ms ease-in-out' : 'none',
+                                    }}
                                 >
-                                    {products.map((product, i) => (
+                                    {extendedSlides.map((product, i) => (
                                         <div
-                                            key={i}
-                                            className="flex-shrink-0 w-full text-center gap-2     flex flex-col justify-center items-center "
+                                            key={`${product.id}-${i}`}
+                                            className="flex-shrink-0 w-full text-center gap-2 flex flex-col justify-center items-center px-4"
                                             style={{ width: `${100 / visible}%` }}
                                         >
                                             <img
                                                 src={product.image}
                                                 alt={product.title}
-                                                className={`  h-[150px] shadow-[0_0_10px_rgba(0,0,0,0.3)] bg-gray-100 object-contain p-4  rounded-sm   ${i === currentIndex ? '' : ''
-                                                    }`}
+                                                className="h-[150px] shadow-[0_0_10px_rgba(0,0,0,0.3)] bg-gray-100 object-contain p-4 rounded-sm transition-transform duration-300"
                                             />
-                                            <p className="text-sm mx-2 mt-8 hover:underline hover:text-orange-400 text-gray-600 leading-tight  line-clamp-2 cursor-pointer">
+                                            <p className="text-sm mx-2 mt-8 hover:underline hover:text-orange-400 text-gray-600 leading-tight line-clamp-2 cursor-pointer">
                                                 {product.title}
                                             </p>
                                         </div>
